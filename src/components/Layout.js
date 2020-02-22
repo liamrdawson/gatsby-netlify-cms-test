@@ -22,13 +22,13 @@ const TemplateWrapper = ({ children }) => {
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/svg"
           href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
           sizes="32x32"
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/svg"
           href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
           sizes="16x16"
         />
