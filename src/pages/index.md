@@ -71,12 +71,12 @@ main:
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
   image1:
     alt: image 1
-    image: /img/logo.svg
+    image: /img/1920x1080.png
   image2:
     alt: image 2
-    image: /img/logo.svg
+    image: /img/1920x1080.png
   image3:
     alt: image 3
-    image: /img/logo.svg
+    image: /img/1920x1080.png
 ---
 
