@@ -16,26 +16,26 @@ const TemplateWrapper = ({ children }) => {
         <meta name="description" content={description} />
 
         <link
-          rel="apple-touch-icon"
+          rel="wild-ivy-logo"
           sizes="180x180"
           href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
         />
         <link
-          rel="icon"
+          rel="wild-ivy-logo"
           type="image/svg"
           href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
           sizes="32x32"
         />
         <link
-          rel="icon"
+          rel="wild-ivy-logo"
           type="image/svg"
           href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
           sizes="16x16"
         />
 
         <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+          rel="wild-ivy-logo"
+          href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
@@ -45,7 +45,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          content={`${withPrefix('/')}img/wild-ivy-logo.svg`}
         />
       </Helmet>
       <Navbar />
