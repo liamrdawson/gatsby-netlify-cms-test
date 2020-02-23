@@ -14,28 +14,22 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
         <link
-          rel="wild-ivy-logo"
-          sizes="180x180"
-          href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
-        />
-        <link
-          rel="wild-ivy-logo"
-          type="image/svg"
-          href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix('/')}img/wild-ivy-icon.png`}
           sizes="32x32"
         />
         <link
-          rel="wild-ivy-logo"
-          type="image/svg"
-          href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix('/')}img/wild-ivy-icon.png`}
           sizes="16x16"
         />
 
         <link
-          rel="wild-ivy-logo"
-          href={`${withPrefix('/')}img/wild-ivy-logo.svg`}
+          rel="mask-icon"
+          href={`${withPrefix('/')}img/wild-ivy-icon.png`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
@@ -45,7 +39,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/wild-ivy-logo.svg`}
+          content={`${withPrefix('/')}img/wild-ivy-icon.png`}
         />
       </Helmet>
       <Navbar />
