@@ -7,20 +7,21 @@ import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
+import styled from 'styled-components' 
+
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+        <Content>
           <img
             src={logo}
             alt="Kaldi"
             style={{ width: '14em', height: '10em' }}
           />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
+        </Content>
+        <ContentCentered>
+        <div className="columns">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
@@ -105,11 +106,42 @@ const Footer = class extends React.Component {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
+        </ContentCentered>
       </footer>
     )
   }
 }
+
+const Content = styled.div`
+  text-align: center;
+  list-style: none;
+  margin: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  li {
+    padding: 0 2rem 1rem 0;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+`;
+
+const ContentCentered = styled.div`
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  li {
+    padding: 0 2rem 1rem 0;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+`;
 
 export default Footer
