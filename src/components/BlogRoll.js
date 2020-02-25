@@ -3,57 +3,131 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+import styled from 'styled-components'
+
+const FeaturedThumbnail = styled.div `
+  flex-basis: 35%;
+  margin: 0 1.5em 0 0;
+`;
+
+const MultilineColumns = styled.div `
+  max-width: 800px;
+  display: flex;    
+  flex-direction: column;
+  margin: -0.75rem auto;
+  flex-wrap: wrap;
+  div {
+    flex: none;
+    width: 100%;
+    display: block;
+    padding: 0.75rem;
+    flex-basis: 35%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+`;
+
+const BlogListArticle = styled.article `
+  align-items: stretch;
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: min-content;
+  margin: 0;
+  border-radius: 4px;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  position: relative;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  header {
+    display: flex;
+    margin-bottom: 1em;
+    p a {
+      word-break: break-word;
+      color: blue;
+      font-weight: 600;
+      line-height: 1.125;
+      font-size: 1.5rem
+    }
+  }
+`;
+
+const DatePostedSpan = styled.span `
+  word-break: break-word;
+  display: block;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+`;
+
+const Button = styled.button `
+    background-color: white;
+    border-color: rgb(219, 219, 219);
+    border-radius: 4px;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    align-items: center;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: calc(0.75em - 1px);
+    padding-right: calc(0.75em - 1px);
+    padding-top: calc(0.5em - 1px);
+`;
+
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <MultilineColumns>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
+            <div key={post.id}>
+              <BlogListArticle style={{backgroundColor: `${post.frontmatter.featuredpost ? 'rgba(214, 64, 0, 0.2)' : ''}`}}>
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <FeaturedThumbnail>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         }}
                       />
-                    </div>
+                    </FeaturedThumbnail>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
+                  <p>
+                    <Link to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <DatePostedSpan>
                       {post.frontmatter.date}
-                    </span>
+                    </DatePostedSpan>
                   </p>
                 </header>
                 <p>
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                  <Link  to={post.fields.slug}>
+                    <Button>
+                      Keep Reading →
+                    </Button>
                   </Link>
                 </p>
-              </article>
+              </BlogListArticle>
             </div>
           ))}
-      </div>
+      </MultilineColumns>
     )
   }
 }
