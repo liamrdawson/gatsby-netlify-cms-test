@@ -7,6 +7,30 @@ import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+import styled from 'styled-components'
+
+const FullWidthImageContainer = styled.div `
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin: 2em -50vw;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    h1, h2 {
+      font-weight: bold;
+      boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40';
+      backgroundColor: '#f40';
+      color: 'white';
+      padding: '1rem';
+    }
+`;
+
 export const ProductPageTemplate = ({
   image,
   title,
@@ -19,26 +43,17 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
+    <FullWidthImageContainer
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
       }}
     >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
+      <h2>
         {title}
       </h2>
-    </div>
+    </FullWidthImageContainer>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -81,8 +96,7 @@ export const ProductPageTemplate = ({
                 </div>
               </div>
               <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
+              <FullWidthImageContainer
                 style={{
                   backgroundImage: `url(${
                     fullImage.childImageSharp
