@@ -9,45 +9,69 @@ import vimeo from '../img/social/vimeo.svg'
 
 import styled from 'styled-components' 
 
+const UL = styled.ul`
+  line-height: 1.25;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  li a {
+      padding: 0 1rem;
+      cursor: pointer;
+      color: red;
+  }
+`;
+
+const Image = styled.img`
+  width: 1em;
+  height: 1em;
+`;
+
+const Column = styled.div`
+  width: 300px;
+  flex: none;
+  display: block;
+  padding: .75rem;
+
+`;
+
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <Content>
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </Content>
-        <ContentCentered>
-        <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
+          <Content>
+            <Image
+              src={logo}
+              alt="Wild Ivy"
+            />
+          </Content>
+          <ContentCentered>
+              <Column>
+                <section>
+                  <UL>
                     <li>
-                      <Link to="/" className="navbar-item">
+                      <Link to="/">
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
+                      <Link to="/about">
                         About
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link to="/products">
                         Products
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact/examples">
+                      <Link to="/contact/examples">
                         Form Examples
                       </Link>
                     </li>
                     <li>
                       <a
-                        className="navbar-item"
+                      
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -55,57 +79,39 @@ const Footer = class extends React.Component {
                         Admin
                       </a>
                     </li>
-                  </ul>
+                  </UL>
                 </section>
-              </div>
-              <div className="column is-4">
+              </Column>
+              <Column>
                 <section>
-                  <ul className="menu-list">
+                  <UL>
                     <li>
-                      <Link className="navbar-item" to="/blog">
+                      <Link to="/blog">
                         Latest Stories
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact">
+                      <Link to="/contact">
                         Contact
                       </Link>
                     </li>
-                  </ul>
+                  </UL>
                 </section>
-              </div>
+              </Column>
               <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
+                  <Image src={facebook} alt="Facebook" />
                 </a>
                 <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
+                  <Image className="fas fa-lg" src={twitter} alt="Twitter" />
                 </a>
                 <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
+                  <Image src={instagram}  alt="Instagram" />
                 </a>
                 <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
+                  <Image src={vimeo} alt="Vimeo" />
                 </a>
               </div>
-            </div>
         </ContentCentered>
       </footer>
     )
@@ -128,15 +134,15 @@ const Content = styled.div`
 `;
 
 const ContentCentered = styled.div`
+  max-width: 960px;
   list-style: none;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 0 auto;
+  width: 800px;
   display: flex;
-  flex-wrap: wrap;
+  flex-grow: 1;
   justify-content: left;
-  align-items: center;
+  align-items: top;
+  flex-direction: row;
   li {
     padding: 0 2rem 1rem 0;
     margin-bottom: 1.5rem;
