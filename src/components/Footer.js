@@ -9,6 +9,8 @@ import vimeo from '../img/social/vimeo.svg'
 
 import styled from 'styled-components' 
 
+import ContentCentered from './containers/ContentCentered'
+
 const UL = styled.ul`
   line-height: 1.25;
   list-style: none;
@@ -39,9 +41,6 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-          <Content>
-            <Image src={logo} alt="Wild Ivy"/>
-          </Content>
           <ContentCentered>
               <Column>
                 <section>
@@ -67,8 +66,7 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <a
-                      
+                      <a      
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -114,37 +112,5 @@ const Footer = class extends React.Component {
     )
   }
 }
-
-const Content = styled.div`
-  text-align: center;
-  list-style: none;
-  margin: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-items: center;
-  li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-  }
-`;
-
-const ContentCentered = styled.div`
-  max-width: 960px;
-  list-style: none;
-  margin: 0 auto;
-  width: 800px;
-  display: flex;
-  flex-grow: 1;
-  justify-content: left;
-  align-items: top;
-  flex-direction: row;
-  li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-  }
-`;
 
 export default Footer
