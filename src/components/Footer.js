@@ -40,10 +40,7 @@ const Footer = class extends React.Component {
     return (
       <footer className="footer has-background-black has-text-white-ter">
           <Content>
-            <Image
-              src={logo}
-              alt="Wild Ivy"
-            />
+            <Image src={logo} alt="Wild Ivy"/>
           </Content>
           <ContentCentered>
               <Column>
@@ -103,7 +100,7 @@ const Footer = class extends React.Component {
                   <Image src={facebook} alt="Facebook" />
                 </a>
                 <a title="twitter" href="https://twitter.com">
-                  <Image className="fas fa-lg" src={twitter} alt="Twitter" />
+                  <Image src={twitter} alt="Twitter" />
                 </a>
                 <a title="instagram" href="https://instagram.com">
                   <Image src={instagram}  alt="Instagram" />
