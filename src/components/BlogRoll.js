@@ -4,27 +4,11 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 import styled from 'styled-components'
+import MultilineContainer from './containers/MultilineContainer'
 
 const FeaturedThumbnail = styled.div `
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
-`;
-
-const MultilineColumns = styled.div `
-  max-width: 800px;
-  display: flex;    
-  flex-direction: column;
-  margin: -0.75rem auto;
-  flex-wrap: wrap;
-  div {
-    flex: none;
-    width: 100%;
-    display: block;
-    padding: 0.75rem;
-    flex-basis: 35%;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
 `;
 
 const BlogListArticle = styled.article `
@@ -89,7 +73,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <MultilineColumns>
+      <MultilineContainer>
         {posts &&
           posts.map(({ node: post }) => (
             <div key={post.id}>
@@ -127,7 +111,7 @@ class BlogRoll extends React.Component {
               </BlogListArticle>
             </div>
           ))}
-      </MultilineColumns>
+      </MultilineContainer>
     )
   }
 }
