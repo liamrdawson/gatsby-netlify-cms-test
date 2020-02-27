@@ -82,7 +82,7 @@ const Footer = class extends React.Component {
                   <UL>
                     <li>
                       <Link to="/blog">
-                        Latest Stories
+                        Latest Events
                       </Link>
                     </li>
                     <li>
