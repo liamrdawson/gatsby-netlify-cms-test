@@ -27,6 +27,17 @@ const NavStart = styled.div`
   }
 `;
 
+const NavMenu = styled.div`
+  display: none;
+  @media(min-width: 1024px) {
+    margin-right: -.75rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-items: stretch;
+    display: flex;
+  }
+`;
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -79,10 +90,7 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
+          <NavMenu id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <NavStart>
               <NavLink to="/about">
                 About
@@ -97,7 +105,7 @@ const Navbar = class extends React.Component {
                 Contact
               </NavLink>
             </NavStart>
-          </div>
+          </NavMenu>
         </div>
       </nav>
     )
