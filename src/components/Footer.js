@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
@@ -34,13 +33,17 @@ const Column = styled.div`
   flex: none;
   display: block;
   padding: .75rem;
+`;
 
+const StyledFooter = styled.footer`
+  background-color: black;
+  padding: 3rem 0 0;
 `;
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <StyledFooter>
           <ContentCentered>
               <Column>
                 <section>
@@ -108,7 +111,7 @@ const Footer = class extends React.Component {
                 </a>
               </div>
         </ContentCentered>
-      </footer>
+      </StyledFooter>
     )
   }
 }

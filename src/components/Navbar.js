@@ -1,7 +1,31 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+
+import styled from 'styled-components'
+
+const NavLink = styled(Link)`
+  color: #4a4a4a;
+  line-height: 1.5;
+  padding: .5rem .75rem;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+`;
+
+const NavStart = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: auto;
+  align-items: stretch;
+  text-align: center;
+  @media(min-width: 1024px) {
+    flex-direction: row;
+  }
+`;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -44,7 +68,7 @@ const Navbar = class extends React.Component {
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
-            {/* Hamburger menu */}
+            {/*  B U R G E R  */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -59,23 +83,20 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+            <NavStart>
+              <NavLink to="/about">
                 About
-              </Link>
-              <Link className="navbar-item" to="/products">
+              </NavLink>
+              <NavLink to="/products">
                 Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
+              </NavLink>
+              <NavLink to="/blog">
                 News & Events
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              </NavLink>
+              <NavLink to="/contact">
                 Contact
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-
-            </div>
+              </NavLink>
+            </NavStart>
           </div>
         </div>
       </nav>
