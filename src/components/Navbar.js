@@ -90,6 +90,9 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
+          {/* T O  D O
+              Fix the isActive logic here so that we aren't relying on a className.
+           */}
           <NavMenu id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <NavStart>
               <NavLink to="/about">
