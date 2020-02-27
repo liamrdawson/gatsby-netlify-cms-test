@@ -1,100 +1,93 @@
 ---
 templateKey: product-page
-title: Our Coffee
+title: Our Flowers
 image: /img/1920x1080.png
-heading: Great coffee with a conscience
+heading: Locally and Ethically Sourced Flowers
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Florem ipsum sneezeweed peruvian lily dune helleborine plumed thistle.
+  Scabious st john’s wort holy grass false goat’s beard. Bloom glory lily
+  drumstick gentian buttercup cosmos foxtail lily.
 intro:
   blurbs:
     - image: /img/1920x1080.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        Lobster claw hyacinth brodiaea royal bluebell st john’s wort scots
+        primrose. Yarrow lily of the valley safari sunset bilberry alpine
+        thistle sticky catchfly shetland mouse-ear. Daisy cotton-grass hop
+        drumstick.
+    - image: /img/1920x1080.png
+      text: >-
+        Ipsum forget-me-not carnation holy grass canterbury bells. Sunflower
+        cosmos lady’s slipper orchid. Round-leaved sundew bellflower scottish
+        dock cockscomb, obedient plant. Jacob’s ladder dog rose bearberry.
+    - image: /img/1920x1080.png
+      text: >-
+        Stock, flame lily singapore orchid tuberose. Loose strife red-hot poker
+        marguerite, lisianthus. Snapdragon, spotted rock-rose prince of Wales
+        feather barberton daisy stonecrop painter’s palette.
     - image: /img/1920x1080.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/1920x1080.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/1920x1080.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Flower queen Fabiola lily daisy. Windflower crocus columbine sturt’s
+        desert rose, flamingo flower. African lily marigold queen Anne’s lace.
+        Cockscomb Kansas feather petal glory lily dorset heath sea holly
+        sunflower. China aster lilac, dandelion brodiaea, amaryllis.
   heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  description: >-
+    Lobster claw hyacinth brodiaea royal bluebell st john’s wort scots primrose.
+    Yarrow lily of the valley safari sunset bilberry alpine thistle sticky
+    catchfly shetland mouse-ear. Daisy cotton-grass hop drumstick.
 main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+  heading: 'Great Florists, Amazing Flowers'
+  description: >-
+    Florem ipsum sneezeweed peruvian lily dune helleborine plumed thistle.
+    Scabious st john’s wort holy grass false goat’s beard. Bloom glory lily
+    drumstick gentian buttercup cosmos foxtail lily. Calla lily montbretia
+    golden rod globe artichoke singapore orchid flame lily bogbean. Lobster claw
+    grass of parnassus thrift. Spotted rock-rose lily gay feather flowering
+    onion bell heather pink heath, bluebell.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: Some words describing the image.
     image: /img/1920x1080.png
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: Some words describing the image.
     image: /img/1920x1080.png
   image3:
-    alt: Coffee beans
+    alt: Some words describing the image.
     image: /img/1920x1080.png
 testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
+  - author: Barry Mc Flowers
+    quote: My wife loved her flowers and the staff were so helpful
   - author: Philipp Trommler
     quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+      Best Flowers I've ever received, would certainly go to Wild Ivy for future
+      events.
 full_image: /img/300x250.png
 pricing:
   heading: Monthly subscriptions
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
+    We make it easy to make great flowers a part of your life. Choose one of our
+    subscription plans to receive great flowers at your doorstep each month.
+    Contact us about more details and payment info.
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - description: A description can go here if you want? Or just more info.
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
+        - Use commas
+        - To separate
+        - List items
       plan: Small
       price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+    - description: A description can go here if you want? Or just more info.
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
+        - Use commas
+        - To separate
+        - List items
       plan: Big
       price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+    - description: A description can go here if you want? Or just more info.
       items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
+        - Use commas
+        - To separate
+        - List items
       plan: Custom
       price: '??'
 ---
