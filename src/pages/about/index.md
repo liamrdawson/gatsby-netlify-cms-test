@@ -1,19 +1,23 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+templateKey: about-page
+title: About Us
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### Here is something about Wild Ivy
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Ornare elementum aptent suspendisse curae interdum hac tortor, vivamus fermentum dictum ultrices sagittis sociosqu habitant consequat, integer tempor porttitor velit donec blandit.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Here's something else
+
+Taciti phasellus lobortis magna aenean malesuada senectus luctus varius, lacinia odio nulla est ut cum ultricies risus tristique, sollicitudin congue nunc platea duis cubilia curabitur. Felis eros accumsan class montes ullamcorper dui, turpis sed etiam pulvinar mattis auctor nam, egestas ad urna placerat dictumst. Netus ligula venenatis neque ac morbi et lacus, semper per vitae nibh eu leo, vel magnis viverra primis conubia hendrerit lectus, rutrum torquent at tincidunt tellus.
+
+### We love flowers
+
+Rutrum habitasse mus mollis nostra gravida ultrices ad integer est quam litora condimentum, parturient himenaeos vestibulum ridiculus nisl faucibus lobortis morbi eleifend tincidunt..
 
 ### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Malesuada neque senectus diam nascetur curae vulputate nam donec netus, orci etiam vivamus nec dis natoque consequat lacinia eros class, ullamcorper odio hendrerit sodales tortor nibh ut venenatis. Cursus mattis vel et ligula aliquet habitant maecenas, accumsan potenti id sem purus magna, dignissim duis cum turpis nisi eu.
+
+### We also do workshops
+
+Ornare varius in nullam interdum massa torquent commodo fusce, penatibus convallis aptent dapibus mauris cubilia quisque aliquam non, sociosqu quis fermentum mi suscipit a posuere. Taciti vitae lectus ultricies auctor proin scelerisque magnis fames sapien justo, porttitor sollicitudin enim leo fringilla eget curabitur imperdiet sociis aenean nulla, pretium vehicula risus urna tempor inceptos at semper volutpat.
