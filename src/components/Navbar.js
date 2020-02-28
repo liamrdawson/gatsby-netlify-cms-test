@@ -38,6 +38,73 @@ const NavMenu = styled.div`
   }
 `;
 
+const Logo = styled.img`
+  width: 150px;
+`;
+
+const NavBarBrand = styled.div`
+  align-items: stretch;
+  display: flex;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+`;
+
+const Container = styled.div`
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  @media screen and (max-width: 1023px) {
+    display: block;
+  }
+
+`
+
+const Nav = styled.nav`
+  background-color: white;
+  min-height: 3.25rem;
+  position: relative;
+  z-index: 30;
+  @media screen and (min-width: 1024px) {
+    min-height: 3.25rem;
+    align-items: stretch;
+    display: flex;
+  }
+`;
+
+const Burger = styled.div`
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+  color: #4a4a4a;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  margin-left: auto;
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 1px;
+    left: calc(50% - 8px);
+    position: absolute;
+  }
+  span:nth-child(1) {
+    top: calc(50% - 6px);
+  }
+  span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  span:nth-child(3) {
+    top: calc(50% + 4px);
+  }
+`;
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -69,17 +136,16 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
+      <Nav
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
+        <Container>
+          <NavBarBrand>
+            <NavLink>
+              <Logo src={logo} alt="Wild Ivy"/>
             {/*  B U R G E R  */}
+            </NavLink>
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -89,7 +155,7 @@ const Navbar = class extends React.Component {
               <span />
               <span />
             </div>
-          </div>
+          </NavBarBrand>
           {/* T O  D O
               Fix the isActive logic here so that we aren't relying on a className.
            */}
@@ -109,8 +175,8 @@ const Navbar = class extends React.Component {
               </NavLink>
             </NavStart>
           </NavMenu>
-        </div>
-      </nav>
+        </Container>
+      </Nav>
     )
   }
 }
