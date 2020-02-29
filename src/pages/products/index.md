@@ -61,7 +61,7 @@ testimonials:
     quote: >-
       Best Flowers I've ever received, would certainly go to Wild Ivy for future
       events.
-full_image: /img/300x250.png
+full_image: /img/1920x1080.png
 pricing:
   heading: Monthly subscriptions
   description: >-
