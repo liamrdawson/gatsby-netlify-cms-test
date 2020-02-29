@@ -9,6 +9,7 @@ import vimeo from '../img/social/vimeo.svg'
 import styled from 'styled-components' 
 
 import ContentCentered from './containers/ContentCentered'
+import Column from './containers/Column'
 
 const UL = styled.ul`
   line-height: 1.25;
@@ -26,13 +27,6 @@ const UL = styled.ul`
 const Image = styled.img`
   width: 1em;
   height: 1em;
-`;
-
-const Column = styled.div`
-  width: 300px;
-  flex: none;
-  display: block;
-  padding: .75rem;
 `;
 
 const StyledFooter = styled.footer`
