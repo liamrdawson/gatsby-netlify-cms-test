@@ -8,6 +8,8 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import styled from 'styled-components'
+import Columns from '../components/containers/Columns'
+import ProductTiles from '../components/ProductTiles'
 
 const FullWidthImageContainer = styled.div `
     width: 100vw;
@@ -29,6 +31,40 @@ const FullWidthImageContainer = styled.div `
       color: 'white';
       padding: '1rem';
     }
+`;
+
+const SectionContainer = styled.div`
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  @media screen and (min-width: 1024px) {
+    max-width: 960px;
+  }
+  section {
+    padding: 3rem 1.5rem;
+  }
+`;
+
+const HeadingAndText = styled.div`
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75rem;
+  text-align: center;
+  @media print, screen and (min-width: 769px) {
+    flex: none;
+    width: 58.33333%;
+    margin: 1.5rem auto;
+  }
+  h3 {
+    margin-bottom: .6666em;
+    font-size: 2.5rem;
+    color: #363636;
+    font-weight: 600;
+    line-height: 1.125;
+  }
 `;
 
 export const ProductPageTemplate = ({
@@ -55,51 +91,34 @@ export const ProductPageTemplate = ({
       </h2>
     </FullWidthImageContainer>
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+      <SectionContainer>
+        <section>
+          <Columns>
+            <HeadingAndText>
+              <h3>{heading}</h3>
               <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
+            </HeadingAndText>
+          </Columns>
+          <Columns>
             <div className="column is-10 is-offset-1">
               <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
+              <Columns>
+                <HeadingAndText>
+                  <h3>
                     {main.heading}
                   </h3>
                   <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
+                </HeadingAndText>
+              </Columns>
+              <ProductTiles image1="main.image1" 
+                            image2="main.image2" 
+                            image3="main.image3"
+              />
               <Testimonials testimonials={testimonials} />
               </div>
-          </div>
-        </div>
-      </div>
+          </Columns>
+        </section>
+      </SectionContainer>
       <FullWidthImageContainer
         style={{
           backgroundImage: `url(${
@@ -107,15 +126,15 @@ export const ProductPageTemplate = ({
           })`,
         }}
       />
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+      <SectionContainer>
+        <section>
+          <Columns>
+            <HeadingAndText>
+              <h3>{heading}</h3>
               <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
+            </HeadingAndText>
+          </Columns>
+          <Columns>
             <div className="column is-10 is-offset-1">
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
@@ -123,9 +142,9 @@ export const ProductPageTemplate = ({
               <p className="is-size-5">{pricing.description}</p>
               <Pricing data={pricing.plans} />
             </div>
-          </div>
-        </div>
-      </div>
+          </Columns>
+        </section>
+      </SectionContainer>
     </section>
   </div>
 )
