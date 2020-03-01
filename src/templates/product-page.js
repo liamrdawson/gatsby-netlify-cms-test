@@ -110,10 +110,7 @@ export const ProductPageTemplate = ({
                   <p>{main.description}</p>
                 </HeadingAndText>
               </Columns>
-              <ProductTiles image1="main.image1" 
-                            image2="main.image2" 
-                            image3="main.image3"
-              />
+              <ProductTiles imageInfo={main} />
               <Testimonials testimonials={testimonials} />
               </div>
           </Columns>
