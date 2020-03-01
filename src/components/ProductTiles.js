@@ -7,19 +7,27 @@ const TilesGrid = styled.div`
     margin-bottom: 3rem;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
     &:not(:last-child) {
         margin-bottom: .75rem;
     }
+    @media print, screen and (min-width: 495px) {
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 const TileLarge = styled.article`
-    grid-column: 1 / span 2;
+    @media print, screen and (min-width: 495px) {
+        grid-column: 1 / span 2;
+    }
 `;
 
 const TileSmall = styled.article`
-    margin-bottom: 3rem;
+    @media print, screen and (min-width: 769px) {
+        margin-bottom: 3rem;
+    }
 `;
 
 const ProductTiles = (main) => {
