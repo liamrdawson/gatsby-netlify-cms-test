@@ -3,19 +3,19 @@ import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import MultilineContainer from './containers/MultilineContainer'
 import styled from 'styled-components'
+import Section from '../components/containers/Section'
 
 const MultilineRowContainer = styled(MultilineContainer)`
   flex-direction: row;
 `;
 
-const Section = styled.section`
-  ${'' /* padding: 3rem 1.5rem; */}
-  padding: 1rem 0;
+const FeatureBlock = styled.div`
+    padding: 1rem 0;
     div {
-      text-align: center;
-      width: 240px;
-      display: 'inline-block';
-      margin: 1rem auto;
+        text-align: center;
+        width: 240px;
+        display: 'inline-block';
+        margin: 1rem auto;
     }
 `;
 
@@ -24,9 +24,9 @@ const FeatureGrid = ({ gridItems }) => (
     {gridItems.map(item => (
       <div key={item.text}>
         <Section>
-            <div>
+            <FeatureBlock>
               <PreviewCompatibleImage imageInfo={item} />
-            </div>
+            </FeatureBlock>
           <p>{item.text}</p>
         </Section>
       </div>
