@@ -5,17 +5,17 @@ import MultilineContainer from './containers/MultilineContainer'
 import styled from 'styled-components'
 
 const MultilineRowContainer = styled(MultilineContainer)`
-    flex-direction: row;
+  flex-direction: row;
 `;
 
 const Section = styled.section`
-  padding: 3rem 1.5rem;
+  ${'' /* padding: 3rem 1.5rem; */}
+  padding: 1rem 0;
     div {
       text-align: center;
-      div {
-        width: 240px;
-        display: 'inline-block';
-      }
+      width: 240px;
+      display: 'inline-block';
+      margin: 1rem auto;
     }
 `;
 
@@ -24,11 +24,9 @@ const FeatureGrid = ({ gridItems }) => (
     {gridItems.map(item => (
       <div key={item.text}>
         <Section>
-          <div>
             <div>
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-          </div>
           <p>{item.text}</p>
         </Section>
       </div>

@@ -43,11 +43,15 @@ const SocialLink = styled.a`
   display: inline;
 `;
 
+const ContentCenteredFooter = styled(ContentCentered)`
+  flex-direction: column;
+`;
+
 const Footer = class extends React.Component {
   render() {
     return (
       <StyledFooter>
-          <ContentCentered>
+          <ContentCenteredFooter>
               <Column>
                 <section>
                   <List>
@@ -113,7 +117,7 @@ const Footer = class extends React.Component {
                   <SocialIcon src={vimeo} alt="Vimeo" />
                 </SocialLink>
               </Column>
-        </ContentCentered>
+        </ContentCenteredFooter>
       </StyledFooter>
     )
   }

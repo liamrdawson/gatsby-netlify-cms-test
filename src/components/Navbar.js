@@ -8,7 +8,7 @@ const NavLink = styled(Link)`
   color: #4a4a4a;
   line-height: 1.5;
   padding: .5rem .75rem;
-  margin: 0 1.5rem;
+  margin: 0;
   position: relative;
   align-items: center;
   text-align: center;

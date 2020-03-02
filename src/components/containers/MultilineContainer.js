@@ -15,6 +15,13 @@ const MultilineContainer = styled.div `
         flex-grow: 1;
         flex-shrink: 1;
     }
+    @media screen and (max-width: 411px) {
+        padding: 0;
+        div {
+            margin: 0;
+            padding: 0;
+        }
+    }
 `;
 
 export default MultilineContainer;
