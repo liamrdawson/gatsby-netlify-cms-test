@@ -8,6 +8,7 @@ const NavLink = styled(Link)`
   color: #4a4a4a;
   line-height: 1.5;
   padding: .5rem .75rem;
+  margin: 0 1.5rem;
   position: relative;
   align-items: center;
   text-align: center;
@@ -15,10 +16,11 @@ const NavLink = styled(Link)`
   display: flex;
 `;
 
-const NavStart = styled.div`
+const NavEnd = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  width: 100%;
   margin-right: auto;
   align-items: stretch;
   text-align: center;
@@ -30,7 +32,6 @@ const NavStart = styled.div`
 const NavMenu = styled.div`
   display: none;
   @media(min-width: 1024px) {
-    margin-right: -.75rem;
     flex-grow: 1;
     flex-shrink: 0;
     align-items: stretch;
@@ -39,14 +40,20 @@ const NavMenu = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 150px;
+  height: 2rem;
+  @media screen and (min-width: 1023px) {
+    min-height: 4rem;
+  }
 `;
 
 const NavBarBrand = styled.div`
   align-items: stretch;
   display: flex;
   flex-shrink: 0;
-  min-height: 3.25rem;
+  min-height: 2rem;
+  @media screen and (min-width: 1023px) {
+    min-height: 4rem;
+  }
 `;
 
 const Container = styled.div`
@@ -56,21 +63,22 @@ const Container = styled.div`
   width: auto;
   align-items: stretch;
   display: flex;
-  min-height: 3.25rem;
+  min-height: 3rem;
   width: 100%;
   @media screen and (max-width: 1023px) {
     display: block;
+    min-height: 4rem;
   }
 
 `
 
 const Nav = styled.nav`
   background-color: white;
-  min-height: 3.25rem;
+  height: 3rem;
   position: relative;
   z-index: 30;
   @media screen and (min-width: 1024px) {
-    min-height: 3.25rem;
+    min-height: 4rem;
     align-items: stretch;
     display: flex;
   }
@@ -79,13 +87,15 @@ const Nav = styled.nav`
 const Burger = styled.div`
   @media screen and (min-width: 1024px) {
     display: none;
+    height: 4rem;
+    width: 4rem;
   }
   color: #4a4a4a;
   cursor: pointer;
   display: block;
-  height: 3.25rem;
+  height: 3rem;
   position: relative;
-  width: 3.25rem;
+  width: 3rem;
   margin-left: auto;
   span {
     background-color: currentColor;
@@ -146,7 +156,7 @@ const Navbar = class extends React.Component {
               <Logo src={logo} alt="Wild Ivy"/>
             {/*  B U R G E R  */}
             </NavLink>
-            <div
+            <Burger
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
@@ -154,13 +164,13 @@ const Navbar = class extends React.Component {
               <span />
               <span />
               <span />
-            </div>
+            </Burger>
           </NavBarBrand>
           {/* T O  D O
               Fix the isActive logic here so that we aren't relying on a className.
            */}
           <NavMenu id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
-            <NavStart>
+            <NavEnd>
               <NavLink to="/about">
                 About
               </NavLink>
@@ -173,7 +183,7 @@ const Navbar = class extends React.Component {
               <NavLink to="/contact">
                 Contact
               </NavLink>
-            </NavStart>
+            </NavEnd>
           </NavMenu>
         </Container>
       </Nav>

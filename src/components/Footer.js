@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import ContentCentered from './containers/ContentCentered'
 import Column from './containers/Column'
 
-const UL = styled.ul`
+const List = styled.ul`
   line-height: 1.25;
   list-style: none;
   text-align: left;
@@ -24,7 +24,7 @@ const UL = styled.ul`
   }
 `;
 
-const Image = styled.img`
+const SocialIcon = styled.img`
   width: 1em;
   height: 1em;
 `;
@@ -34,6 +34,15 @@ const StyledFooter = styled.footer`
   padding: 3rem 0 0;
 `;
 
+const SocialLink = styled.a`
+  padding: .5em .5em .3em .5em;
+  border-radius: 1em;
+  background-color: white;
+  margin: .5em;
+  vertical-align: middle;
+  display: inline;
+`;
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -41,7 +50,7 @@ const Footer = class extends React.Component {
           <ContentCentered>
               <Column>
                 <section>
-                  <UL>
+                  <List>
                     <li>
                       <Link to="/">
                         Home
@@ -71,12 +80,12 @@ const Footer = class extends React.Component {
                         Admin
                       </a>
                     </li>
-                  </UL>
+                  </List>
                 </section>
               </Column>
               <Column>
                 <section>
-                  <UL>
+                  <List>
                     <li>
                       <Link to="/blog">
                         Latest Events
@@ -87,23 +96,23 @@ const Footer = class extends React.Component {
                         Contact
                       </Link>
                     </li>
-                  </UL>
+                  </List>
                 </section>
               </Column>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <Image src={facebook} alt="Facebook" />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <Image src={twitter} alt="Twitter" />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <Image src={instagram}  alt="Instagram" />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <Image src={vimeo} alt="Vimeo" />
-                </a>
-              </div>
+              <Column>
+                <SocialLink>
+                  <SocialIcon src={facebook} alt="Facebook" />
+                </SocialLink>
+                <SocialLink>
+                  <SocialIcon src={twitter} alt="Twitter" />
+                </SocialLink>
+                <SocialLink>
+                  <SocialIcon src={instagram}  alt="Instagram" />
+                </SocialLink>
+                <SocialLink>
+                  <SocialIcon src={vimeo} alt="Vimeo" />
+                </SocialLink>
+              </Column>
         </ContentCentered>
       </StyledFooter>
     )
