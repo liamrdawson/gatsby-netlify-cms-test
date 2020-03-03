@@ -5,6 +5,14 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
 import styled from 'styled-components' 
+import Container from '../../components/containers/Container'
+import Columns from '../../components/containers/Columns'
+import Section from '../../components/containers/Section'
+
+const TagColumns = styled(Columns)`
+  margin: 0 auto;
+`;
+
 
 const TagList = styled.ul `
   list-style: none;
@@ -23,6 +31,29 @@ const TagList = styled.ul `
   }
 `;
 
+const TagsHeadingAndText = styled.div`
+  flex: none;
+  width: 83.33333%;
+  display: block;
+  padding: 0.75rem;
+  margin-bottom: 6rem;
+  h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    line-height: 1.125;
+    color: #363636;
+    word-break: break-word;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  @media print, screen and (min-width: 769px) {
+    flex: none;
+    width: 58.33333%;
+    margin: 1.5rem auto;
+  }
+`;
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -32,15 +63,12 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="section">
+    <Section>
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
+      <Container>
+        <TagColumns>
+          <TagsHeadingAndText>
+            <h1>Tags</h1>
             <TagList>
               {group.map(tag => (
                   <li key={tag.fieldValue}>
@@ -50,10 +78,10 @@ const TagsPage = ({
                   </li>
                 ))}
             </TagList>
-          </div>
-        </div>
-      </div>
-    </section>
+          </TagsHeadingAndText>
+        </TagColumns>
+      </Container>
+    </Section>
   </Layout>
 )
 

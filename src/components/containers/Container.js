@@ -5,6 +5,9 @@ const Container = styled.div`
     margin: 0 auto;
     position: relative;
     width: auto;
+    @media screen and (min-width: 1024px) {
+        max-width: 960px;
+    }
 `;
 
 export default Container;

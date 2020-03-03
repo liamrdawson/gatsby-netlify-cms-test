@@ -14,7 +14,7 @@ const HeadingAndText = styled.div`
         width: 58.33333%;
         margin: 1.5rem auto;
     }
-    h2, h3 {
+    h1, h2, h3 {
         font-size: 2.5rem;
         line-height: 1.125;
         font-weight: 600;
