@@ -4,24 +4,61 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+import styled from 'styled-components'
+import Section from '../components/containers/Section'
+import Container from '../components/containers/Container'
+import Columns from '../components/containers/Columns'
+
+const HeadingAndTextLeft = styled.div`
+      display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem;
+    text-align: left;
+    @media print, screen and (min-width: 769px) {
+        flex: none;
+        width: 80.33333%;
+        margin: 1.5rem auto;
+    }
+    h1, h2, h3 {
+        font-size: 2.5rem;
+        line-height: 1.125;
+        font-weight: 600;
+        color: #363636;
+    }
+    h3 {
+        margin-bottom: 0.6666em;
+        &:not(:first-child) {
+          margin-top: 1.3333em;
+        }
+    }
+    h2 {
+        margin-bottom: 3rem;
+    }
+      &:not(:last-child), ul:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+`;
+
+
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+    <Section>
+      <Container>
+        <Columns>
+          <HeadingAndTextLeft>
+              <h2>
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <PageContent content={content} />
+          </HeadingAndTextLeft>
+        </Columns>
+      </Container>
+    </Section>
   )
 }
 
