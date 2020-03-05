@@ -10,6 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import styled from 'styled-components'
 import Columns from '../components/containers/Columns'
 import ProductTiles from '../components/ProductTiles'
+import Section from '../components/containers/Section'
 
 const FullWidthImageContainer = styled.div `
     width: 100vw;
@@ -67,6 +68,30 @@ const HeadingAndText = styled.div`
   }
 `;
 
+const PricingBlock = styled.div`
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+  margin: 0 auto;
+  @media screen and (min-width: 769px) {
+    flex: none;
+    width: 83.33333%;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.25rem 
+  }
+`;
+
+const FeatureCard = styled(Columns) {
+  
+}
+
 export const ProductPageTemplate = ({
   image,
   title,
@@ -78,7 +103,7 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-  <div className="content">
+  <div>
     <FullWidthImageContainer
       style={{
         backgroundImage: `url(${
@@ -90,7 +115,7 @@ export const ProductPageTemplate = ({
         {title}
       </h2>
     </FullWidthImageContainer>
-    <section className="section section--gradient">
+    <Section>
       <SectionContainer>
         <section>
           <Columns>
@@ -100,7 +125,7 @@ export const ProductPageTemplate = ({
             </HeadingAndText>
           </Columns>
           <Columns>
-            <div className="column is-10 is-offset-1">
+            <div>
               <Features gridItems={intro.blurbs} />
               <Columns>
                 <HeadingAndText>
@@ -132,17 +157,17 @@ export const ProductPageTemplate = ({
             </HeadingAndText>
           </Columns>
           <Columns>
-            <div className="column is-10 is-offset-1">
-              <h2 className="has-text-weight-semibold is-size-2">
+            <PricingBlock>
+              <h2>
                 {pricing.heading}
               </h2>
-              <p className="is-size-5">{pricing.description}</p>
+              <p>{pricing.description}</p>
               <Pricing data={pricing.plans} />
-            </div>
+            </PricingBlock>
           </Columns>
         </section>
       </SectionContainer>
-    </section>
+    </Section>
   </div>
 )
 
