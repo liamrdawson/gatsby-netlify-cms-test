@@ -2,6 +2,127 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
+import styled from 'styled-components'
+import Section from '../../components/containers/Section'
+import Container from '../../components/containers/Container'
+
+const FormContent = styled.div`
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #363636;
+    font-weight: 600;
+    line-height: 1.125;
+  }
+  form input {
+    margin: 0;
+  }
+  form {
+    div:not(:last-child) {
+      margin-bottom: 0.75rem;
+      label {
+        color: #363636;
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        &:not(:last-child) {
+          margin-bottom: 0.5em;
+        }
+      }
+      div {
+        box-sizing: border-box;
+        clear: both;
+        font-size: 1rem;
+        position: relative;
+        text-align: left;
+      }
+    }
+  }
+
+`;
+
+const Control = styled.input`
+    box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    color: #363636;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: calc(0.75em - 1px);
+    padding-right: calc(0.75em - 1px);
+    padding-top: calc(0.5em - 1px);
+    position: relative;
+    vertical-align: top;
+`;
+
+const File = styled.div`
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  label {
+    align-items: stretch;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    input {
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      outline: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    span {
+      background-color: white;
+      color: #4a4a4a;
+      border-color: #dbdbdb;
+      border-radius: 4px;
+      font-size: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      white-space: nowrap;
+    }
+  }
+`;
+
+const Button = styled.button`
+  background-color: white;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+`;
+
 function encode(data) {
   const formData = new FormData()
 
@@ -43,9 +164,9 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <Section>
+          <Container>
+            <FormContent>
               <h1>File Upload</h1>
               <form
                 name="file-upload"
@@ -63,13 +184,12 @@ export default class Contact extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                <div>
+                  <label htmlFor={'name'}>
                     Your name
                   </label>
-                  <div className="control">
-                    <input
-                      className="input"
+                  <div>
+                    <Control
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -78,30 +198,29 @@ export default class Contact extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <div className="file">
-                    <label className="file-label">
+                <div>
+                  <File>
+                    <label>
                       <input
-                        className="file-input"
                         type="file"
                         name="attachment"
                         onChange={this.handleAttachment}
                       />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
+                      <span>
+                        <File>Choose a file…</File>
                       </span>
                     </label>
-                  </div>
+                  </File>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div>
+                  <Button type="submit">
                     Send
-                  </button>
+                  </Button>
                 </div>
               </form>
-            </div>
-          </div>
-        </section>
+            </FormContent>
+          </Container>
+        </Section>
       </Layout>
     )
   }
