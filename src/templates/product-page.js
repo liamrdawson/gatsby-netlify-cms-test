@@ -88,9 +88,6 @@ const PricingBlock = styled.div`
   }
 `;
 
-const FeatureCard = styled(Columns) {
-  
-}
 
 export const ProductPageTemplate = ({
   image,
