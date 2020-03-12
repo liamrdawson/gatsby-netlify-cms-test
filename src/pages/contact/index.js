@@ -50,7 +50,6 @@ const TextArea = styled.textarea`
   width: 100%;
   max-height: 40em;
   min-height: 20em;
-  background-color: white;
   border-color: #dbdbdb;
   border-radius: 4px;
   color: #363636;
@@ -60,7 +59,6 @@ const Input = styled.input`
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%;
-  background-color: white;
   border-color: #dbdbdb;
   border-radius: 4px;
   color: #363636;

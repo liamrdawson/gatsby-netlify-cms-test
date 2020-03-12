@@ -45,7 +45,6 @@ const Control = styled.input`
     box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
     max-width: 100%;
     width: 100%;
-    background-color: white;
     border-radius: 4px;
     color: #363636;
     align-items: center;
@@ -87,8 +86,6 @@ const File = styled.div`
       width: 100%;
     }
     span {
-      background-color: white;
-      color: #4a4a4a;
       border-color: #dbdbdb;
       border-radius: 4px;
       font-size: 1em;
@@ -100,7 +97,6 @@ const File = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: white;
   border-color: #dbdbdb;
   border-width: 1px;
   color: #363636;

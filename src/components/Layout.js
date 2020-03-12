@@ -2,14 +2,35 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.scss'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { createGlobalStyle } from "styled-components"
+import brandStyles from '../paletteStyles'
+
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: ${brandStyles.fontFamilyPrimary};
+    color: ${brandStyles.colorBodyFont};
+    background-color: ${brandStyles.colorBackgroundLight};
+  }
+  h1, h2, h3 {
+    font-family: ${brandStyles.fontFamilySecondary}
+  }
+  a {
+    color: ${brandStyles.colorFontLink};
+  }
+`
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
+        <GlobalStyle/>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -31,6 +52,9 @@ const TemplateWrapper = ({ children }) => {
           rel="mask-icon"
           href={`${withPrefix('/')}img/wild-ivy-icon.png`}
           color="#ff4400"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap" rel="stylesheet"
         />
         <meta name="theme-color" content="#fff" />
 

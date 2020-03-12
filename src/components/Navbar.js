@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
-
 import styled from 'styled-components'
+import brandStyles from '../paletteStyles'
+
 
 const NavLink = styled(Link)`
-  color: #4a4a4a;
   line-height: 1.5;
   padding: .5rem .75rem;
   margin: 0;
@@ -30,7 +30,7 @@ const NavEnd = styled.div`
 `;
 
 const NavMenu = styled.div`
-  display: none;
+  display: ${({open}) => open ? 'block' : 'none'};
   @media(min-width: 1024px) {
     flex-grow: 1;
     flex-shrink: 0;
@@ -69,11 +69,9 @@ const Container = styled.div`
     display: block;
     min-height: 4rem;
   }
-
 `
 
 const Nav = styled.nav`
-  background-color: white;
   height: 3rem;
   position: relative;
   z-index: 30;
@@ -90,86 +88,60 @@ const Burger = styled.div`
     height: 4rem;
     width: 4rem;
   }
-  color: #4a4a4a;
   cursor: pointer;
   display: block;
   height: 3rem;
   position: relative;
   width: 3rem;
   margin-left: auto;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
   span {
-    background-color: currentColor;
     display: block;
     height: 1px;
     left: calc(50% - 8px);
     position: absolute;
-  }
-  span:nth-child(1) {
-    top: calc(50% - 6px);
-  }
-  span:nth-child(2) {
-    top: calc(50% - 1px);
-  }
-  span:nth-child(3) {
-    top: calc(50% + 4px);
-  }
-`;
-
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
+    transform-origin: center;
+    transition-duration: 86ms;
+    background-color: ${brandStyles.colorBackgroundDark};
+    transition-property:  opacity, transform;
+    transition-timing-function: ease-out;
+    width: 16px;
+    :first-child {
+      top: ${({open}) => open ? 'calc(50% - 1px);' : 'calc(50% - 6px)'};
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+    :nth-child(2) {
+      top: calc(50% - 1px);
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+    :nth-child(3) {
+      top: ${({open}) => open ? 'calc(50% - 1px)' : 'calc(50% + 4px)'};
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
+}
+`;
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
 
-  render() {
+const Navbar = () => {
+    const [open, setOpen] = useState(false);
     return (
-      <Nav
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <Nav role="navigation" aria-label="main-navigation">
         <Container>
           <NavBarBrand>
             <NavLink>
               <Logo src={logo} alt="Wild Ivy"/>
-            {/*  B U R G E R  */}
             </NavLink>
-            <Burger
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
+            <Burger open={open} onClick={() => setOpen(!open)}  data-target="navMenu">
               <span />
               <span />
               <span />
             </Burger>
           </NavBarBrand>
-          {/* T O  D O
-              Fix the isActive logic here so that we aren't relying on a className.
-           */}
-          <NavMenu id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
+          <NavMenu id="navMenu" open={open} onClick={() => setOpen(!open)}>
             <NavEnd>
               <NavLink to="/about">
                 About
@@ -188,7 +160,7 @@ const Navbar = class extends React.Component {
         </Container>
       </Nav>
     )
-  }
+
 }
 
 export default Navbar

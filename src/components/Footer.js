@@ -30,14 +30,12 @@ const SocialIcon = styled.img`
 `;
 
 const StyledFooter = styled.footer`
-  background-color: black;
   padding: 3rem 0 0;
 `;
 
 const SocialLink = styled.a`
   padding: .5em .5em .3em .5em;
   border-radius: 1em;
-  background-color: white;
   margin: .5em;
   vertical-align: middle;
   display: inline;

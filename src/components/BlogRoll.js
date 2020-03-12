@@ -22,13 +22,11 @@ const BlogListArticle = styled.article `
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: #4a4a4a;
   header {
     display: flex;
     margin-bottom: 1em;
     p a {
       word-break: break-word;
-      color: blue;
       font-weight: 600;
       line-height: 1.125;
       font-size: 1.5rem
@@ -40,14 +38,11 @@ const DatePostedSpan = styled.span `
   word-break: break-word;
   display: block;
   font-size: 1.25rem;
-  color: #4a4a4a;
-  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
 `;
 
 const Button = styled.button `
-    background-color: white;
     border-color: rgb(219, 219, 219);
     border-radius: 4px;
     border-width: 1px;

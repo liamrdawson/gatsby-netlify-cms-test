@@ -103,7 +103,6 @@ const Titles = styled.div`
     margin-bottom: 2rem;
   }
   h2, h3 {
-    color: #4a4a4a;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.25;

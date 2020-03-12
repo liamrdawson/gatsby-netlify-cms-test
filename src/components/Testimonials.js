@@ -7,7 +7,6 @@ const Message = styled.article`
   :not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  background-color: white;
   border-radius: 4px;
   font-size: 1rem;
   div {
@@ -15,7 +14,6 @@ const Message = styled.article`
     border-radius: 4px;
     border-style: solid;
     border-width: 0 0 0 4px;
-    color: #4a4a4a;
     padding: 1.25em 1.5em;
   }
 `;
