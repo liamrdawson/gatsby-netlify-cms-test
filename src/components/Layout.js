@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import { createGlobalStyle } from "styled-components"
-import {brandStyles} from '../paletteStyles'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -21,28 +21,33 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${brandStyles.colorBackgroundLight};
   }
   h1, h2, h3 {
-    font-family: ${brandStyles.fontFamilySecondary}
+    font-family: ${brandStyles.fontFamilySecondary};
   }
   p {
-    font-size: ${brandStyles.fontSizeBody}
+    font-size: ${brandStyles.fontSizeBody};
   }
   a {
     color: ${brandStyles.colorFontLink};
   }
   h1 {
-    font-size: ${brandStyles.fontSizeHeader}
+    font-size: ${brandStyles.fontSizeHeader};
+    margin-bottom: ${spacingUnit._09};
   }
   h2 {
-    font-size: ${brandStyles.fontSizeLargest}
+    font-size: ${brandStyles.fontSizeLargest};
+    margin-bottom: ${spacingUnit._08};
   }
   h3 {
-    font-size: ${brandStyles.fontSizeLarger}
+    font-size: ${brandStyles.fontSizeLarger};
+    margin-bottom: ${spacingUnit._07};
   }
   h4 {
-    font-size: ${brandStyles.fontSizeLarge}
+    font-size: ${brandStyles.fontSizeLarge};
+    margin-bottom: ${spacingUnit._06};
   }
   h5 {
-    font-size: ${brandStyles.fontSizeBody}
+    font-size: ${brandStyles.fontSizeBody};
+    margin-bottom: ${spacingUnit._06};
   }
 `
 
