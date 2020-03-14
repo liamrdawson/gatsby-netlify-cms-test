@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 import styled from 'styled-components'
 import MultilineContainer from './containers/MultilineContainer'
 
 const FeaturedThumbnail = styled.div `
   flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  margin: 0 ${spacingUnit._06} 0 0;
 `;
 
 const BlogListArticle = styled.article `
@@ -18,18 +19,18 @@ const BlogListArticle = styled.article `
   flex-shrink: 1;
   min-height: min-content;
   margin: 0;
-  border-radius: 4px;
-  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  border-radius: ${brandStyles.borderRadius};
+  padding: ${spacingUnit._06} ${spacingUnit._08} ${spacingUnit._06} ${spacingUnit._05};
   position: relative;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  box-shadow: ${brandStyles.boxShadow};
   header {
     display: flex;
-    margin-bottom: 1em;
+    margin-bottom: ${spacingUnit._05};
     p a {
       word-break: break-word;
       font-weight: 600;
       line-height: 1.125;
-      font-size: 1.5rem
+      font-size: ${brandStyles.fontSizeLarge};
     }
   }
 `;
@@ -37,29 +38,27 @@ const BlogListArticle = styled.article `
 const DatePostedSpan = styled.span `
   word-break: break-word;
   display: block;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: ${brandStyles.fontSizeLarge};
   line-height: 1.25;
 `;
 
 const Button = styled.button `
-    border-color: rgb(219, 219, 219);
-    border-radius: 4px;
-    border-width: 1px;
-    color: #363636;
+    border-radius: ${brandStyles.borderRadius};
+    border: ${brandStyles.borderAccent};
+    color: ${brandStyles.colorSecondary};
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
     -webkit-appearance: none;
     align-items: center;
-    font-size: 1rem;
+    font-size: ${brandStyles.fontSizeBody};
     height: 2.5em;
     justify-content: flex-start;
     line-height: 1.5;
-    padding-bottom: calc(0.5em - 1px);
-    padding-left: calc(0.75em - 1px);
-    padding-right: calc(0.75em - 1px);
-    padding-top: calc(0.5em - 1px);
+    padding-bottom: calc(${spacingUnit._03} - 1px);
+    padding-left: calc(${spacingUnit._04} - 1px);
+    padding-right: calc(${spacingUnit._04} - 1px);
+    padding-top: calc(${spacingUnit._03} - 1px);
 `;
 
 class BlogRoll extends React.Component {
@@ -72,7 +71,7 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div key={post.id}>
-              <BlogListArticle style={{backgroundColor: `${post.frontmatter.featuredpost ? 'rgba(214, 64, 0, 0.2)' : ''}`}}>
+              <BlogListArticle style={{backgroundColor: `${post.frontmatter.featuredpost ? brandStyles.colorBackgroundAccent : ''}`}}>
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <FeaturedThumbnail>

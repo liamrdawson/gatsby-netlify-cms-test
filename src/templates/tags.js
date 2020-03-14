@@ -8,20 +8,21 @@ import Section from '../components/containers/Section'
 import Columns from '../components/containers/Columns'
 import Container from '../components/containers/Container'
 import HeadingAndTextBlock from '../components/HeadingAndTextBlock'
+import {spacingUnit} from '../paletteStyles'
 
 const TagList = styled.ul `
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 1.5rem;
-  margin-top: 1.5rem;
+  margin-right: ${spacingUnit._06};
+  margin-top: ${spacingUnit._06};
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
+    padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
+    margin-bottom: ${spacingUnit._06};
     margin-top: 0;
   }
 `;

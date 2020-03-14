@@ -3,12 +3,11 @@ import Layout from '../../components/Layout'
 import styled from 'styled-components'
 import Section from '../../components/containers/Section'
 import Container from '../../components/containers/Container'
+import {brandStyles} from '../../paletteStyles'
 
 const Content = styled.div`
   h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #363636;
+    color: ${brandStyles.colorFontSecondary};
     font-weight: 600;
     line-height: 1.125;
   }

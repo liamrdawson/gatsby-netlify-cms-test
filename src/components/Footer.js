@@ -5,6 +5,7 @@ import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 import styled from 'styled-components' 
 
@@ -15,28 +16,26 @@ const List = styled.ul`
   line-height: 1.25;
   list-style: none;
   text-align: left;
-  margin: 0;
-  padding: 0;
   li a {
-      padding: 0 1rem;
+      padding: 0 ${spacingUnit._05};
       cursor: pointer;
-      color: red;
+      color: ${brandStyles.colorFontLink};
   }
 `;
 
 const SocialIcon = styled.img`
-  width: 1em;
-  height: 1em;
+  width: ${spacingUnit._05};
+  height: ${spacingUnit._05};
 `;
 
 const StyledFooter = styled.footer`
-  padding: 3rem 0 0;
+  padding: ${spacingUnit._09} 0 0;
 `;
 
 const SocialLink = styled.a`
-  padding: .5em .5em .3em .5em;
-  border-radius: 1em;
-  margin: .5em;
+  padding: ${spacingUnit._03} ${spacingUnit._03} ${spacingUnit._02} ${spacingUnit._03};
+  border-radius: ${spacingUnit._05};
+  margin: ${spacingUnit._03};
   vertical-align: middle;
   display: inline;
 `;

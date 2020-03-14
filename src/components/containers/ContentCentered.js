@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {spacingUnit} from '../../paletteStyles'
 
 const ContentCentered = styled.div`
     max-width: 960px;
@@ -11,8 +12,8 @@ const ContentCentered = styled.div`
     align-items: top;
     flex-direction: row;
     li {
-        padding: 0 2rem 1rem 0;
-        margin-bottom: 1.5rem;
+        padding: 0 ${spacingUnit._05} ${spacingUnit._05} 0;
+        margin-bottom: ${spacingUnit._06};
         margin-top: 0;
     }
     @media screen and (min-width: 1024px) {

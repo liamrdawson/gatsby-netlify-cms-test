@@ -5,13 +5,15 @@ import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import { createGlobalStyle } from "styled-components"
-import brandStyles from '../paletteStyles'
+import {brandStyles} from '../paletteStyles'
 
 
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-size: ${brandStyles.fontSizeBase}
   }
   body {
     font-family: ${brandStyles.fontFamilyPrimary};
@@ -21,8 +23,26 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3 {
     font-family: ${brandStyles.fontFamilySecondary}
   }
+  p {
+    font-size: ${brandStyles.fontSizeBody}
+  }
   a {
     color: ${brandStyles.colorFontLink};
+  }
+  h1 {
+    font-size: ${brandStyles.fontSizeHeader}
+  }
+  h2 {
+    font-size: ${brandStyles.fontSizeLargest}
+  }
+  h3 {
+    font-size: ${brandStyles.fontSizeLarger}
+  }
+  h4 {
+    font-size: ${brandStyles.fontSizeLarge}
+  }
+  h5 {
+    font-size: ${brandStyles.fontSizeBody}
   }
 `
 

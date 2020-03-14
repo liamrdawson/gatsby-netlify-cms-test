@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
+import {brandStyles, spacingUnit} from '../paletteStyles'
 import styled from 'styled-components' 
 
 import Section from '../components/containers/Section'
@@ -16,15 +16,15 @@ const TagList = styled.ul `
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 1.5rem;
-  margin-top: 1.5rem;
+  margin-right: ${spacingUnit._06};
+  margin-top: ${spacingUnit._06};
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
+    padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
+    margin-bottom: ${spacingUnit._06};
     margin-top: 0;
   }
 `;
@@ -34,34 +34,33 @@ const HeadingAndText = styled.div`
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: .75rem;
+    padding: ${spacingUnit._04};
     text-align: left;
     @media print, screen and (min-width: 769px) {
         flex: none;
         width: 80.33333%;
-        margin: 1.5rem auto;
+        margin: ${spacingUnit._06} auto;
     }
     p {
-      margin: 1rem 0;
+      margin: ${spacingUnit._05} 0;
     }
     h1, h2, h3 {
-        font-size: 2.5rem;
         line-height: 1.125;
         font-weight: 600;
-        color: #363636;
+        color: ${brandStyles.colorBodyFont};
     }
     h3 {
-        margin-bottom: 0.6666em;
+        margin-bottom: ${spacingUnit._06};
         &:not(:first-child) {
-          margin-top: 1.3333em;
+          margin-top: ${spacingUnit._05};
         }
     }
     h2 {
-        margin-top: 3rem;
-        margin-bottom: 2rem;
+        margin-top: ${spacingUnit._09};
+        margin-bottom: ${spacingUnit._07};
     }
       &:not(:last-child), ul:not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: ${spacingUnit._05};
       }
     }
 `;

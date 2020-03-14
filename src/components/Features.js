@@ -4,18 +4,19 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import MultilineContainer from './containers/MultilineContainer'
 import styled from 'styled-components'
 import Section from '../components/containers/Section'
+import {spacingUnit} from '../paletteStyles'
 
 const MultilineRowContainer = styled(MultilineContainer)`
   flex-direction: row;
 `;
 
 const FeatureBlock = styled.div`
-    padding: 1rem 0;
+    padding: ${spacingUnit._05} 0;
     div {
         text-align: center;
         width: 240px;
         display: 'inline-block';
-        margin: 1rem auto;
+        margin: ${spacingUnit._05} auto;
     }
 `;
 

@@ -2,31 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PropTypes from 'prop-types'
+import {spacingUnit, breakpoint} from '../paletteStyles'
 
 const TilesGrid = styled.div`
-    margin-bottom: 3rem;
+    margin-bottom: ${spacingUnit._09};
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: ${spacingUnit._05};
     &:not(:last-child) {
-        margin-bottom: .75rem;
+        margin-bottom: ${spacingUnit._04};
     }
-    @media print, screen and (min-width: 495px) {
+    @media print, screen and (min-width: ${breakpoint.sm}) {
         grid-template-rows: 1fr auto;
         grid-template-columns: 1fr 1fr;
     }
 `;
 
 const TileLarge = styled.article`
-    @media print, screen and (min-width: 495px) {
+    @media print, screen and (min-width: ${breakpoint.sm}) {
         grid-column: 1 / span 2;
     }
 `;
 
 const TileSmall = styled.article`
-    @media print, screen and (min-width: 769px) {
-        margin-bottom: 3rem;
+    @media print, screen and (min-width: ${breakpoint.md}) {
+        margin-bottom: ${spacingUnit._09};
     }
 `;
 

@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import {brandStyles, spacingUnit, layoutUnit} from '../../paletteStyles'
 
 import styled from 'styled-components' 
 import Container from '../../components/containers/Container'
@@ -13,20 +14,19 @@ const TagColumns = styled(Columns)`
   margin: 0 auto;
 `;
 
-
 const TagList = styled.ul `
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 1.5rem;
-  margin-top: 1.5rem;
+  margin-right: ${spacingUnit._06};
+  margin-top: ${spacingUnit._06};
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
+    padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
+    margin-bottom: ${spacingUnit._06};
     margin-top: 0;
   }
 `;
@@ -35,22 +35,19 @@ const TagsHeadingAndText = styled.div`
   flex: none;
   width: 83.33333%;
   display: block;
-  padding: 0.75rem;
-  margin-bottom: 6rem;
+  padding: ${spacingUnit._04};
+  margin-bottom: ${layoutUnit._06};
   h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: ${spacingUnit._06};
     font-weight: 600;
     line-height: 1.125;
-    color: #363636;
+    color: ${brandStyles.colorBodyFont};
     word-break: break-word;
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 0;
   }
   @media print, screen and (min-width: 769px) {
     flex: none;
     width: 58.33333%;
-    margin: 1.5rem auto;
+    margin: ${spacingUnit._06} auto;
   }
 `;
 

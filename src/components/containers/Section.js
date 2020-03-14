@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import {spacingUnit} from '../../paletteStyles';
 
 const Section = styled.section`
-    padding: 3rem 1.5rem;
+    padding: ${spacingUnit._09} ${spacingUnit._06};
     display: block;
 `;
 

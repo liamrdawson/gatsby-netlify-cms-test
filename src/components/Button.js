@@ -1,30 +1,27 @@
 import styled from 'styled-components'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 const Button = styled.button`
-    border-color: transparent;
-    color: #f40;
+    color: ${brandStyles.colorAccent};
     cursor: pointer;
     justify-content: center;
-    padding-bottom: calc(0.5em - 1px);
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: calc(0.5em - 1px);
+    padding-bottom: calc(${spacingUnit._03} - 1px);
+    padding-left: ${spacingUnit._05};
+    padding-right: ${spacingUnit._05};
+    padding-top: calc(${spacingUnit._03} - 1px);
     text-align: center;
     white-space: nowrap;
-    border-width: 1px;
     align-items: center;
-    border: 2px solid #f40;
-    border-radius: 4px;
-    box-shadow: none;
+    border: ${brandStyles.borderTransparent};
+    border-radius: ${brandStyles.borderRadius};
     display: inline-flex;
-    font-size: 1rem;
     height: 2.5em;
     line-height: 1.5;
     position: relative;
     vertical-align: top;
     &:hover {
-        background-color: #f40;
-        color: white;
+        background-color: ${brandStyles.colorBackgroundAccent};
+        color: ${brandStyles.colorFontSecondary};
     }
 `;
 

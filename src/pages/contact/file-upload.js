@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import {brandStyles, spacingUnit} from '../../paletteStyles'
 
 import styled from 'styled-components'
 import Section from '../../components/containers/Section'
@@ -8,9 +9,7 @@ import Container from '../../components/containers/Container'
 
 const FormContent = styled.div`
   h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #363636;
+    color: ${brandStyles.colorFontAccent};
     font-weight: 600;
     line-height: 1.125;
   }
@@ -19,20 +18,18 @@ const FormContent = styled.div`
   }
   form {
     div:not(:last-child) {
-      margin-bottom: 0.75rem;
+      margin-bottom: ${spacingUnit._04};
       label {
-        color: #363636;
+        color: ${brandStyles.colorFontAccent};
         display: block;
-        font-size: 1rem;
         font-weight: 700;
         &:not(:last-child) {
-          margin-bottom: 0.5em;
+          margin-bottom: ${spacingUnit._03};
         }
       }
       div {
         box-sizing: border-box;
         clear: both;
-        font-size: 1rem;
         position: relative;
         text-align: left;
       }
@@ -42,26 +39,23 @@ const FormContent = styled.div`
 `;
 
 const Control = styled.input`
-    box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
-    max-width: 100%;
-    width: 100%;
-    border-radius: 4px;
-    color: #363636;
-    align-items: center;
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
-    box-shadow: none;
-    display: inline-flex;
-    font-size: 1rem;
-    height: 2.5em;
-    justify-content: flex-start;
-    line-height: 1.5;
-    padding-bottom: calc(0.5em - 1px);
-    padding-left: calc(0.75em - 1px);
-    padding-right: calc(0.75em - 1px);
-    padding-top: calc(0.5em - 1px);
-    position: relative;
-    vertical-align: top;
+  box-shadow: ${brandStyles.boxShadowInset};
+  color: ${brandStyles.colorFontAccent};
+  border: ${brandStyles.borderBase};
+  border-radius: ${brandStyles.borderRadius};
+  max-width: 100%;
+  width: 100%;
+  align-items: center;
+  display: inline-flex;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
 `;
 
 const File = styled.div`
@@ -86,9 +80,8 @@ const File = styled.div`
       width: 100%;
     }
     span {
-      border-color: #dbdbdb;
-      border-radius: 4px;
-      font-size: 1em;
+      border: ${brandStyles.borderBase};
+      border-radius: ${brandStyles.borderRadius};
       padding-left: 1em;
       padding-right: 1em;
       white-space: nowrap;
@@ -97,9 +90,10 @@ const File = styled.div`
 `;
 
 const Button = styled.button`
-  border-color: #dbdbdb;
-  border-width: 1px;
-  color: #363636;
+  border: ${brandStyles.borderBase};
+  border-radius: ${brandStyles.borderRadius};
+  color: ${brandStyles.colorFontAccent};
+  border-radius: ${brandStyles.borderRadius};
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.5em - 1px);
@@ -109,11 +103,7 @@ const Button = styled.button`
   text-align: center;
   white-space: nowrap;
   align-items: center;
-  border: 1px solid;
-  border-radius: 4px;
-  box-shadow: none;
   display: inline-flex;
-  font-size: 1rem;
   height: 2.5em;
   justify-content: flex-start;
   line-height: 1.5;

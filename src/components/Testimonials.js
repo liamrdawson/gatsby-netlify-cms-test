@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 import styled from 'styled-components'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 const Message = styled.article`
   :not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: ${spacingUnit._06};
   }
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: ${brandStyles.borderRadius};
   div {
-    border-color: #dbdbdb;
-    border-radius: 4px;
+    border-color: ${brandStyles.borderColorBase};
+    border-radius: ${brandStyles.borderRadius};
     border-style: solid;
     border-width: 0 0 0 4px;
-    padding: 1.25em 1.5em;
+    padding: ${spacingUnit._05} ${spacingUnit._06};
   }
 `;
 

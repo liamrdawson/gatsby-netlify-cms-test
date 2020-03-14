@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 import styled from 'styled-components'
+import {brandStyles, spacingUnit, layoutUnit} from '../../paletteStyles'
 
 const FullWidthImageContainer = styled.div `
     width: 100vw;
@@ -17,32 +18,31 @@ const FullWidthImageContainer = styled.div `
     align-items: center;
     margin-top: 0;
     h1 {
-      font-size: 3rem;
       font-weight: bold;
-      boxShadow: 0.5rem 0 0 #f40, -0.5rem 0 0 #f40;
-      backgroundColor: #f40;
-      color: white;
-      padding: 1rem;
+      boxShadow: ${brandStyles.boxShadow};
+      backgroundColor: ${brandStyles.colorBackgroundAccent};
+      color: ${brandStyles.colorFontSecondary};
+      padding: ${spacingUnit._05};
     }
 `;
 
 const Content = styled.div`
   text-align: center;
   list-style: none;
-  margin: 1.5rem;
+  margin: ${spacingUnit._06};
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
+    padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
+    margin-bottom: ${spacingUnit._06};
     margin-top: 0;
   }
 `;
 
 const Section = styled.div `
-  padding: 3rem 1.5rem;
+  padding: ${layoutUnit._04} ${layoutUnit._02};
 `;
 
 const Container = styled.div `

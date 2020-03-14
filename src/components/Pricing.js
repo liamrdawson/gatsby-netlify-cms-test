@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {brandStyles, spacingUnit} from '../paletteStyles'
 
 const PricingColumns = styled.div`
   display: flex;
-  margin-left: -.75rem;
-  margin-right: -.75rem;
-  margin-top: -.75rem;
+  margin-left: -${spacingUnit._04};
+  margin-right: -${spacingUnit._04};
+  margin-top: -${spacingUnit._04};
   &:last-child {
-    margin-bottom: -.75rem;
+    margin-bottom: -${spacingUnit._04};
   }
 `;
 
@@ -17,20 +18,21 @@ const PricingColumn = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: .75rem;
+  padding: ${spacingUnit._04} 0;
 `;
 
 const PricingSection = styled.section`
-  padding: 3rem 1.5rem;
+  padding: ${spacingUnit._09} 0;
     h2 {
-      font-size: 3rem;
-      color: 
+      font-size: ${brandStyles.fontSizeLargest};
     }
     h2, h4 {
+      padding: ${spacingUnit._09} 0;
       text-align: center;
       font-weight: 700;
     }
     p {
+      padding: ${spacingUnit._06} 0;
       font-weight: 600;
     }
 `;

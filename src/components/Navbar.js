@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
 import styled from 'styled-components'
-import brandStyles from '../paletteStyles'
+import {brandStyles, spacingUnit, breakpoint} from '../paletteStyles'
 
 
 const NavLink = styled(Link)`
   line-height: 1.5;
-  padding: .5rem .75rem;
-  margin: 0;
+  padding: ${spacingUnit._03} ${spacingUnit._04};
   position: relative;
   align-items: center;
   text-align: center;
@@ -31,7 +30,7 @@ const NavEnd = styled.div`
 
 const NavMenu = styled.div`
   display: ${({open}) => open ? 'block' : 'none'};
-  @media(min-width: 1024px) {
+  @media(min-width: ${breakpoint.lg}) {
     flex-grow: 1;
     flex-shrink: 0;
     align-items: stretch;
@@ -41,7 +40,7 @@ const NavMenu = styled.div`
 
 const Logo = styled.img`
   height: 2rem;
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: ${breakpoint.lg}) {
     min-height: 4rem;
   }
 `;
@@ -51,7 +50,7 @@ const NavBarBrand = styled.div`
   display: flex;
   flex-shrink: 0;
   min-height: 2rem;
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: ${breakpoint.lg}) {
     min-height: 4rem;
   }
 `;
@@ -65,7 +64,7 @@ const Container = styled.div`
   display: flex;
   min-height: 3rem;
   width: 100%;
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: ${breakpoint.lg}) {
     display: block;
     min-height: 4rem;
   }
@@ -95,7 +94,7 @@ const Burger = styled.div`
   width: 3rem;
   margin-left: auto;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: ${brandStyles.colorBackgroundDark}10;
   }
   span {
     display: block;

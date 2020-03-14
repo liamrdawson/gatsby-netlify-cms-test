@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+import {breakpoint, spacingUnit} from '../../paletteStyles'
 
 const Columns = styled.div`
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
-    @media screen and (min-width: 769px) {
+    margin-left: ${spacingUnit._04};
+    margin-right: ${spacingUnit._04};
+    margin-top: ${spacingUnit._04};
+    @media screen and (min-width: ${breakpoint.lg}) {
         display: flex; 
     }
     &:last-child {
-        margin-bottom: -0.75rem;
+        margin-bottom: ${spacingUnit._04};
     }
 `;
 

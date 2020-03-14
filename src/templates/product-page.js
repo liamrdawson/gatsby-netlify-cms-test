@@ -9,6 +9,7 @@ import styled from 'styled-components'
 import Columns from '../components/containers/Columns'
 import ProductTiles from '../components/ProductTiles'
 import Section from '../components/containers/Section'
+import {brandStyles, spacingUnit, breakpoint} from '../paletteStyles'
 
 const FullWidthImageContainer = styled.div `
     width: 100vw;
@@ -25,10 +26,10 @@ const FullWidthImageContainer = styled.div `
     margin-top: 0;
     h1, h2 {
       font-weight: bold;
-      boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40';
-      backgroundColor: '#f40';
-      color: 'white';
-      padding: '1rem';
+      boxShadow: ${brandStyles.boxShadow};
+      backgroundColor: ${brandStyles.colorBackgroundAccent};
+      color: ${brandStyles.colorFontSecondary};
+      padding: ${spacingUnit._05};
     }
 `;
 
@@ -37,11 +38,11 @@ const SectionContainer = styled.div`
   margin: 0 auto;
   position: relative;
   width: auto;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${breakpoint.lg}) {
     max-width: 960px;
   }
   section {
-    padding: 3rem 1.5rem;
+    padding: ${spacingUnit._09} ${spacingUnit._06};
   }
 `;
 
@@ -50,17 +51,16 @@ const HeadingAndText = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: .75rem;
+  padding: ${spacingUnit._04};
   text-align: center;
-  @media print, screen and (min-width: 769px) {
+  @media print, screen and (min-width: ${breakpoint.md}) {
     flex: none;
     width: 58.33333%;
-    margin: 1.5rem auto;
+    margin: ${spacingUnit._06} auto;
   }
   h3 {
-    margin-bottom: .6666em;
-    font-size: 2.5rem;
-    color: #363636;
+    margin-bottom: ${spacingUnit._04};
+    color: ${brandStyles.colorBodyFont};;
     font-weight: 600;
     line-height: 1.125;
   }
@@ -71,18 +71,17 @@ const PricingBlock = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 0.75rem;
+  padding: ${spacingUnit._04};
   margin: 0 auto;
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: ${breakpoint.md}) {
     flex: none;
     width: 83.33333%;
   }
   h2 {
     font-weight: 600;
-    font-size: 2.5rem;
   }
   p {
-    font-size: 1.25rem 
+    font-size: ${brandStyles.fontSizeLarge};
   }
 `;
 

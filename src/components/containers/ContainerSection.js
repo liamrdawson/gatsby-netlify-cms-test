@@ -1,16 +1,17 @@
 import React, { Children } from 'React'
 import styled from 'styled-components'
+import {breakpoint, spacingUnit} from '../../paletteStyles'
 
 const ContainerSection = styled.div`
     flex-grow: 1;
     margin: 0 auto;
     position: relative;
     width: auto;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${breakpoint.lg}) {
         max-width: 960px;
     }
     section {
-        padding: 3rem 1.5rem;
+        padding: ${spacingUnit._09} ${spacingUnit._06};
     }
 `;
 

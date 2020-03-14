@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import {brandStyles, spacingUnit} from '../paletteStyles'
+
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -38,25 +40,19 @@ const TitleContainer = styled.div`
         text-align: center;
         margin: 0;
         font-weight: 700;
-        box-shadow: 0.5rem 0 0 #f40, -0.5rem 0 0 #f40;
-        background-color: #f40;
-        box-shadow:  rgb(255, 68, 0) 0.5rem 0px 0px, 
-                    rgb(255, 68, 0) -0.5rem 0px 0px;
-        color: white;
+        background-color: ${brandStyles.colorBackgroundAccent};
+        box-shadow:  ${
+          brandStyles.boxShadow,
+          brandStyles.boxShadow
+        };
+        color: ${brandStyles.colorFontSecondary};
     }
     h1 {
-      font-size: 3rem;
-      padding: 1rem;
-      @media screen and (min-width: 769px) {
-        font-size: 2.5em;
-      }
+      padding: ${spacingUnit._05};
     }
     h3 {
       line-height: 1;
-      padding: 0.25em;
-      @media screen and (min-width: 769px) {
-        font-size: 1.25rem;
-      }
+      padding: ${spacingUnit._03};
     }
 `;
 
@@ -66,10 +62,10 @@ const Column = styled.div`
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 0.75rem;
+    padding: ${spacingUnit._04};
     div {
     &(:not-last-child) {
-      margin-bottom: 1.5rem;
+      margin-bottom: ${spacingUnit._06};
     }
   }
 `;
@@ -84,7 +80,6 @@ const Column12 = styled(Column)`
   width: 100%;
   h3 {
     font-weight: 600;
-    font-size: 2.5rem;
     margin: 0;
     padding: 0;
   }
@@ -96,17 +91,15 @@ const Column12Centered = styled(Column12) `
 
 const Titles = styled.div`
   h1 {
-    color: #363636;
-    font-size: 2rem;
+    color: ${brandStyles.colorFontAccent};
     font-weight: 600;
     line-height: 1.125;
-    margin-bottom: 2rem;
+    margin-bottom: ${spacingUnit._07};
   }
   h2, h3 {
-    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.25;
-    margin-bottom: 1.25rem;
+    margin-bottom: ${spacingUnit._06};
   }
 `;
 
