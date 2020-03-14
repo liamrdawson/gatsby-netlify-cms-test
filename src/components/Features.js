@@ -14,7 +14,7 @@ const FeatureBlock = styled.div`
     padding: ${spacingUnit._05} 0;
     div {
         text-align: center;
-        width: 240px;
+        min-width: 240px;
         display: 'inline-block';
         margin: ${spacingUnit._05} auto;
     }

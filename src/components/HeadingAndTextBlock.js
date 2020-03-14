@@ -20,10 +20,10 @@ const HeadingAndText = styled.div`
         font-weight: 600;
     }
     h3 {
-        margin-bottom: ${spacingUnit._03};
+        ${'' /* margin-bottom: ${spacingUnit._03}; */}
     }
     h2 {
-        margin-bottom: ${spacingUnit._04};
+        ${'' /* margin-bottom: ${spacingUnit._04}; */}
     }
 `;
 

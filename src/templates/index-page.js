@@ -38,7 +38,6 @@ const TitleContainer = styled.div`
   flex-direction: column;
       h1, h2, h3 {
         text-align: center;
-        margin: 0;
         font-weight: 700;
         background-color: ${brandStyles.colorBackgroundAccent};
         box-shadow:  ${
@@ -80,8 +79,6 @@ const Column12 = styled(Column)`
   width: 100%;
   h3 {
     font-weight: 600;
-    margin: 0;
-    padding: 0;
   }
 `;
 
@@ -94,12 +91,10 @@ const Titles = styled.div`
     color: ${brandStyles.colorFontAccent};
     font-weight: 600;
     line-height: 1.125;
-    margin-bottom: ${spacingUnit._07};
   }
   h2, h3 {
     font-weight: 400;
     line-height: 1.25;
-    margin-bottom: ${spacingUnit._06};
   }
 `;
 

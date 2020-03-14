@@ -42,7 +42,7 @@ const SectionContainer = styled.div`
     max-width: 960px;
   }
   section {
-    padding: ${spacingUnit._09} ${spacingUnit._06};
+    padding: ${spacingUnit._06} ${spacingUnit._03};
   }
 `;
 
