@@ -14,7 +14,7 @@ import Button from '../components/Button'
 
 const FullWidthImageContainer = styled.div `
     width: 100vw;
-    height: 800px;
+    height: 90vh;
     position: relative;
     left: 50%;
     right: 50%;
