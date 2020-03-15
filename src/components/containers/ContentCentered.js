@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {spacingUnit} from '../../paletteStyles'
+import {spacingUnit, breakpoint} from '../../paletteStyles'
 
 const ContentCentered = styled.div`
     max-width: 960px;
@@ -16,7 +16,7 @@ const ContentCentered = styled.div`
         margin-bottom: ${spacingUnit._06};
         margin-top: 0;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${breakpoint.lg}) {
         min-width: 800px;
     }
 `;

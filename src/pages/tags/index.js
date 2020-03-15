@@ -3,7 +3,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import {brandStyles, spacingUnit, layoutUnit} from '../../paletteStyles'
+import {brandStyles, spacingUnit, layoutUnit, breakpoint} from '../../paletteStyles'
 
 import styled from 'styled-components' 
 import Container from '../../components/containers/Container'
@@ -44,7 +44,7 @@ const TagsHeadingAndText = styled.div`
     color: ${brandStyles.colorBodyFont};
     word-break: break-word;
   }
-  @media print, screen and (min-width: 769px) {
+  @media print, screen and (min-width: ${breakpoint.md}) {
     flex: none;
     width: 58.33333%;
     margin: ${spacingUnit._06} auto;

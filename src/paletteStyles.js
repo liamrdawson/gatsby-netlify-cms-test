@@ -74,11 +74,10 @@ export const brandStyles = {
 
 }
 
-//      SPATIAL DESIGN SYSTEM
 
-//      SPACING SCALE
-//  Use the spacing scale when building individual components. 
-//  It includes small increments needed to create appropriate spatial relationships for detail-level designs
+/*
+    BREAKPOINTS
+ */
 
 export const breakpoint = {
     xs: '320px',
@@ -87,6 +86,20 @@ export const breakpoint = {
     lg: '991px',
     xl: '1200px',
 }
+
+
+/*      
+    SPATIAL DESIGN SYSTEM
+    (Taken from the Carbon Design System: carbondesignsystem.com/guidelines/spacing/#spacing-scale)
+
+    SPACING SCALE
+    Used for smaller, more refined spacing needs, specifically within the context of a component 
+    (i.e. the space between a label and a text input).
+
+    Use the spacing scale when building individual components. 
+    It includes small increments needed to create appropriate spatial relationships for detail-level designs.
+    
+*/
 
 export const spacingUnit = {
     _01: '0.125rem', 
@@ -99,11 +112,17 @@ export const spacingUnit = {
     _08: '2.5rem', 
     _09: '3rem',      
 }
-//      LAYOUT SCALE
-//  The layout scale is used for arranging components and other UI parts into a full page layout. 
-//  It has larger increments that are used to control the density of a design. 
-//  Use the smaller layout tokens to create more dense compositions and direct relationships. 
-//  Use the larger tokens to increase the amount of white space and to disassociate sections.
+
+/*
+    LAYOUT SCALE
+    Typically used for positioning components on a page (i.e., the space between a text field and a selector).
+
+    The layout scale is used for arranging components and other UI parts into a full page layout. 
+    It has larger increments that are used to control the density of a design. 
+    Use the smaller layout tokens to create more dense compositions and direct relationships. 
+    Use the larger tokens to increase the amount of white space and to disassociate sections.
+
+*/
 
 export const layoutUnit = {
     _01: '1rem',

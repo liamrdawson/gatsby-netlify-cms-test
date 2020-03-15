@@ -11,13 +11,13 @@ const MultilineRowContainer = styled(MultilineContainer)`
 `;
 
 const FeatureBlock = styled.div`
-    padding: ${spacingUnit._05} 0;
-    div {
-        text-align: center;
-        min-width: 240px;
-        display: 'inline-block';
-        margin: ${spacingUnit._05} auto;
-    }
+  padding: ${spacingUnit._05} 0;
+  div {
+    text-align: center;
+    min-width: 240px;
+    display: 'inline-block';
+    margin: ${spacingUnit._05} auto;
+  }
 `;
 
 const FeatureGrid = ({ gridItems }) => (

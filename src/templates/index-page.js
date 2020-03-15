@@ -9,8 +9,6 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 import styled from 'styled-components'
-import Section from '../components/containers/Section'
-import Container from '../components/containers/Container'
 import Columns from '../components/containers/Columns'
 import Button from '../components/Button'
 
@@ -41,7 +39,6 @@ const TitleContainer = styled.div`
         font-weight: 700;
         background-color: ${brandStyles.colorBackgroundAccent};
         box-shadow:  ${
-          brandStyles.boxShadow,
           brandStyles.boxShadow
         };
         color: ${brandStyles.colorFontSecondary};
@@ -69,20 +66,7 @@ const Column = styled.div`
   }
 `;
 
-const Column10 = styled(Column)`
-  flex: none;
-  width: 83.33333%;
-`;
-
-const Column12 = styled(Column)`
-  flex: none;
-  width: 100%;
-  h3 {
-    font-weight: 600;
-  }
-`;
-
-const Column12Centered = styled(Column12) `
+const ColumnCentered = styled(Column) `
   text-align: center; 
 `;
 
@@ -119,53 +103,45 @@ export const IndexPageTemplate = ({
         </h3>
       </TitleContainer>
     </FullWidthImageContainer>
-    <Section>
-      <Container>
-        <Section>
-          <Columns>
-            <Column10>
-              <div>
-                <div>
-                  <Titles>
-                    <h1>{mainpitch.title}</h1>
-                  </Titles>
-                  <Titles>
-                    <h3>{mainpitch.description}</h3>
-                  </Titles>
-                </div>
-                <Columns>
-                  <Column12>
-                    <h3>
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </Column12>
-                </Columns>
-                <Features gridItems={intro.blurbs} />
-                <Columns>
-                  <Column12Centered>
-                    <Button as={Link} to="/products">
-                      See all products
-                    </Button>
-                  </Column12Centered>
-                </Columns>
-                <Column12>
-                  <h3>
-                    News and Events
-                  </h3>
-                  <BlogRoll />
-                  <Column12Centered>
-                    <Button as={Link} to="/blog">
-                      Read more
-                    </Button>
-                  </Column12Centered>
-                </Column12>
-              </div>
-            </Column10>
-          </Columns>
-        </Section>
-      </Container>
-    </Section>
+    <Column>
+      <div>
+        <div>
+          <Titles>
+            <h1>{mainpitch.title}</h1>
+          </Titles>
+          <Titles>
+            <h3>{mainpitch.description}</h3>
+          </Titles>
+        </div>
+        <Columns>
+          <Column>
+            <h3>
+              {heading}
+            </h3>
+            <p>{description}</p>
+          </Column>
+        </Columns>
+        <Features gridItems={intro.blurbs} />
+        <Columns>
+          <ColumnCentered>
+            <Button as={Link} to="/products">
+              See all products
+            </Button>
+          </ColumnCentered>
+        </Columns>
+        <Column>
+          <h3>
+            News and Events
+          </h3>
+          <BlogRoll />
+          <ColumnCentered>
+            <Button as={Link} to="/blog">
+              Read more
+            </Button>
+          </ColumnCentered>
+        </Column>
+      </div>
+    </Column>
   </div>
 )
 

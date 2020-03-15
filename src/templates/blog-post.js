@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import {brandStyles, spacingUnit} from '../paletteStyles'
+import {brandStyles, spacingUnit, breakpoint} from '../paletteStyles'
 import styled from 'styled-components' 
 
 import Section from '../components/containers/Section'
@@ -36,7 +36,7 @@ const HeadingAndText = styled.div`
     flex-shrink: 1;
     padding: ${spacingUnit._04};
     text-align: left;
-    @media print, screen and (min-width: 769px) {
+    @media print, screen and (min-width: ${breakpoint.md}) {
         flex: none;
         width: 80.33333%;
         margin: ${spacingUnit._06} auto;

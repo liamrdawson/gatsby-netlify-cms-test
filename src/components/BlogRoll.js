@@ -14,7 +14,8 @@ const FeaturedThumbnail = styled.div `
 
 const BlogListArticle = styled.article `
   align-items: stretch;
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
   min-height: min-content;
@@ -25,6 +26,7 @@ const BlogListArticle = styled.article `
   box-shadow: ${brandStyles.boxShadow};
   header {
     display: flex;
+    flex-direction: column;
     margin-bottom: ${spacingUnit._05};
     p a {
       word-break: break-word;

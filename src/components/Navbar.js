@@ -13,6 +13,7 @@ const NavLink = styled(Link)`
   text-align: center;
   justify-content: center;
   display: flex;
+  text-decoration: none;
 `;
 
 const NavEnd = styled.div`
@@ -23,7 +24,8 @@ const NavEnd = styled.div`
   margin-right: auto;
   align-items: stretch;
   text-align: center;
-  @media(min-width: 1024px) {
+  background-color: ${brandStyles.colorBackgroundLight};
+  @media(min-width: ${breakpoint.lg}) {
     flex-direction: row;
   }
 `;
@@ -74,7 +76,7 @@ const Nav = styled.nav`
   height: 3rem;
   position: relative;
   z-index: 30;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${breakpoint.lg}) {
     min-height: 4rem;
     align-items: stretch;
     display: flex;
@@ -82,7 +84,7 @@ const Nav = styled.nav`
 `;
 
 const Burger = styled.div`
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${breakpoint.lg}) {
     display: none;
     height: 4rem;
     width: 4rem;
