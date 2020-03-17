@@ -1,14 +1,18 @@
 import styled from 'styled-components'
-import {breakpoint, spacingUnit} from '../../paletteStyles'
+import {breakpoint, spacingUnit, layoutUnit} from '../../paletteStyles'
 
 const Column = styled.div`
-    width: auto;
-    flex: none;
+    margin: 0 auto;
     display: block;
-    padding: ${spacingUnit._04};
-    @media screen and (min-width: ${breakpoint.lg}) {
-        width: 250px;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: ${layoutUnit._02};
+    div {
+    &(:not-last-child) {
+      margin-bottom: ${spacingUnit._06};
     }
+  }
 `;
 
 export default Column;

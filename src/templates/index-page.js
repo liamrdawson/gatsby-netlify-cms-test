@@ -10,6 +10,7 @@ import BlogRoll from '../components/BlogRoll'
 
 import styled from 'styled-components'
 import Columns from '../components/containers/Columns'
+import Column from '../components/containers/Column'
 import Button from '../components/Button'
 
 const FullWidthImageContainer = styled.div `
@@ -50,24 +51,6 @@ const TitleContainer = styled.div`
       line-height: 1;
       padding: ${spacingUnit._03};
     }
-`;
-
-const Column = styled.div`
-    margin: 0 auto;
-    display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: ${spacingUnit._04};
-    div {
-    &(:not-last-child) {
-      margin-bottom: ${spacingUnit._06};
-    }
-  }
-`;
-
-const ColumnCentered = styled(Column) `
-  text-align: center; 
 `;
 
 const Titles = styled.div`
@@ -123,22 +106,22 @@ export const IndexPageTemplate = ({
         </Columns>
         <Features gridItems={intro.blurbs} />
         <Columns>
-          <ColumnCentered>
+          <Column>
             <Button as={Link} to="/products">
               See all products
             </Button>
-          </ColumnCentered>
+          </Column>
         </Columns>
         <Column>
           <h3>
             News and Events
           </h3>
           <BlogRoll />
-          <ColumnCentered>
+          <Column>
             <Button as={Link} to="/blog">
               Read more
             </Button>
-          </ColumnCentered>
+          </Column>
         </Column>
       </div>
     </Column>

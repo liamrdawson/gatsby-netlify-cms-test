@@ -19,7 +19,7 @@ const BlogListArticle = styled.article `
   flex-grow: 1;
   flex-shrink: 1;
   min-height: min-content;
-  margin: 0;
+  margin: ${spacingUnit._06}  0;
   border-radius: ${brandStyles.borderRadius};
   padding: ${spacingUnit._06} ${spacingUnit._08} ${spacingUnit._06} ${spacingUnit._05};
   position: relative;
