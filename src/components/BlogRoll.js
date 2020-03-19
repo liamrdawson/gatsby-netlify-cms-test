@@ -21,7 +21,7 @@ const BlogListArticle = styled.article `
   min-height: min-content;
   margin: ${spacingUnit._06}  0;
   border-radius: ${brandStyles.borderRadius};
-  padding: ${spacingUnit._06} ${spacingUnit._08} ${spacingUnit._06} ${spacingUnit._05};
+  padding: ${spacingUnit._06} ${spacingUnit._05};
   position: relative;
   box-shadow: ${brandStyles.boxShadow};
   header {

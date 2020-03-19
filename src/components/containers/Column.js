@@ -7,7 +7,8 @@ const Column = styled.div`
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: ${layoutUnit._02};
+    padding: ${layoutUnit._02} ${layoutUnit._01};
+    max-width: 800px;
     div {
     &(:not-last-child) {
       margin-bottom: ${spacingUnit._06};

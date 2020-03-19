@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
-import {brandStyles, spacingUnit} from '../paletteStyles'
+import {brandStyles, spacingUnit, layoutUnit, breakpoint} from '../paletteStyles'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 import styled from 'styled-components'
-import Columns from '../components/containers/Columns'
 import Column from '../components/containers/Column'
 import Button from '../components/Button'
 
@@ -19,7 +18,7 @@ const FullWidthImageContainer = styled.div `
     position: relative;
     left: 50%;
     right: 50%;
-    margin: 2em -50vw;
+    margin: 0 -50vw;
     background-size: cover;
     background-position: bottom;
     display: flex;
@@ -65,6 +64,16 @@ const Titles = styled.div`
   }
 `;
 
+const SectionBlock = styled.section`
+  margin: ${layoutUnit._05} 0; 
+  @media screen and (min-width: ${breakpoint.md}) {
+    margin: ${layoutUnit._06} 0; 
+  }
+  @media screen and (min-width: ${breakpoint.xl}) {
+    margin: ${layoutUnit._07} 0; 
+  }
+`;
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -78,52 +87,42 @@ export const IndexPageTemplate = ({
     <FullWidthImageContainer 
       style={{backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}}>
       <TitleContainer>
-        <h1>
-          {title}
-        </h1>
-        <h3>
-          {subheading}
-        </h3>
+        <h1>{title}</h1>
+        <h3>{subheading}</h3>
       </TitleContainer>
     </FullWidthImageContainer>
     <Column>
-      <div>
-        <div>
-          <Titles>
-            <h1>{mainpitch.title}</h1>
-          </Titles>
-          <Titles>
-            <h3>{mainpitch.description}</h3>
-          </Titles>
-        </div>
-        <Columns>
-          <Column>
-            <h3>
-              {heading}
-            </h3>
-            <p>{description}</p>
-          </Column>
-        </Columns>
+
+      <SectionBlock>
+        <Titles>
+          <h1>{mainpitch.title}</h1>
+        </Titles>
+        <Titles>
+          <h3>{mainpitch.description}</h3>
+        </Titles>
+      </SectionBlock>
+
+      <SectionBlock>
+        <h3>{heading}</h3>
+        <p>{description}</p>
+      </SectionBlock>
+
+      <SectionBlock>
+        <h3>Our Flowers</h3>
         <Features gridItems={intro.blurbs} />
-        <Columns>
-          <Column>
-            <Button as={Link} to="/products">
-              See all products
-            </Button>
-          </Column>
-        </Columns>
-        <Column>
-          <h3>
-            News and Events
-          </h3>
-          <BlogRoll />
-          <Column>
-            <Button as={Link} to="/blog">
-              Read more
-            </Button>
-          </Column>
-        </Column>
-      </div>
+        <Button as={Link} to="/products">
+          See all products
+        </Button>
+      </SectionBlock>
+
+      <SectionBlock>
+        <h3>News and Events</h3>
+        <BlogRoll />
+        <Button as={Link} to="/blog">
+          Read more
+        </Button>
+      </SectionBlock>
+
     </Column>
   </div>
 )

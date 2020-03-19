@@ -49,7 +49,7 @@ const Footer = class extends React.Component {
     return (
       <StyledFooter>
           <ContentCenteredFooter>
-              <Column>
+              {/* <Column>
                 <section>
                   <List>
                     <li>
@@ -99,7 +99,7 @@ const Footer = class extends React.Component {
                     </li>
                   </List>
                 </section>
-              </Column>
+              </Column> */}
               <Column>
                 <SocialLink>
                   <SocialIcon src={facebook} alt="Facebook" />
