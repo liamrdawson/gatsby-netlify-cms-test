@@ -1,13 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import MultilineContainer from './containers/MultilineContainer'
+// import MultilineContainer from './containers/MultilineContainer'
 import styled from 'styled-components'
 import Section from '../components/containers/Section'
-import {spacingUnit} from '../paletteStyles'
+import {spacingUnit, layoutUnit, breakpoint} from '../paletteStyles'
 
-const MultilineRowContainer = styled(MultilineContainer)`
-  flex-direction: row;
+const FeatureGridBlock = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: ${layoutUnit._01};
+  @media screen and (min-width: ${breakpoint.sm}) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: ${layoutUnit._02};
+  }
+  @media screen and (min-width: ${breakpoint.md}) {
+    grid-gap: ${layoutUnit._03};
+  }
+  @media screen and (min-width: ${breakpoint.lg}) {
+    grid-gap: ${layoutUnit._04};
+  }
+  @media screen and (min-width: ${breakpoint.xl}) {
+    grid-gap: ${layoutUnit._05};
+  }
 `;
 
 const FeatureBlock = styled.div`
@@ -21,7 +37,7 @@ const FeatureBlock = styled.div`
 `;
 
 const FeatureGrid = ({ gridItems }) => (
-  <MultilineRowContainer>
+  <FeatureGridBlock>
     {gridItems.map(item => (
       <div key={item.text}>
         <Section>
@@ -32,7 +48,7 @@ const FeatureGrid = ({ gridItems }) => (
         </Section>
       </div>
     ))}
-  </MultilineRowContainer>
+  </FeatureGridBlock>
 )
 
 FeatureGrid.propTypes = {

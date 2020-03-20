@@ -43,6 +43,7 @@ export const brandStyles = {
     borderColorBase: COLORS.DARK,
     borderColorDark: COLORS.DARKEST,
     borderColorMedium: COLORS.DARKER,
+    borderColorAccent: COLORS.ACCENT,
 
     borderDarkest: `solid 2px ${COLORS.DARKEST}`,
     borderDarker: `solid 2px ${COLORS.DARKER}`,
