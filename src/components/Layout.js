@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import { createGlobalStyle } from "styled-components"
-import {brandStyles, spacingUnit} from '../paletteStyles'
+import {brandStyles, spacingUnit, breakpoint} from '../paletteStyles'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -14,6 +14,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-size: ${brandStyles.fontSizeBase}
+  }
+  html {
+    font-size: 14px;
+    @media screen and (min-width: ${breakpoint.sm}) {
+      font-size: 16px;
+    }
   }
   body {
     font-family: ${brandStyles.fontFamilyPrimary};
@@ -31,23 +37,48 @@ const GlobalStyle = createGlobalStyle`
   }
   h1 {
     font-size: ${brandStyles.fontSizeHeader};
-    margin-bottom: ${spacingUnit._09};
+    margin-top: ${spacingUnit._07};
+    margin-bottom: ${spacingUnit._06};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-top: ${spacingUnit._09};
+      margin-bottom: ${spacingUnit._08};
+    }
   }
   h2 {
     font-size: ${brandStyles.fontSizeLargest};
-    margin-bottom: ${spacingUnit._08};
+    margin-top: ${spacingUnit._06};
+    margin-bottom: ${spacingUnit._05};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-top: ${spacingUnit._08};
+      margin-bottom: ${spacingUnit._07};
+    }
   }
   h3 {
     font-size: ${brandStyles.fontSizeLarger};
-    margin-bottom: ${spacingUnit._07};
+    margin-top: ${spacingUnit._05};
+    margin-bottom: ${spacingUnit._04};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-top: ${spacingUnit._07};
+      margin-bottom: ${spacingUnit._06};
+    }
   }
   h4 {
     font-size: ${brandStyles.fontSizeLarge};
-    margin-bottom: ${spacingUnit._06};
+    margin-top: ${spacingUnit._03};
+    margin-bottom: ${spacingUnit._02};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-top: ${spacingUnit._06};
+      margin-bottom: ${spacingUnit._05};
+    }
   }
   h5 {
     font-size: ${brandStyles.fontSizeBody};
-    margin-bottom: ${spacingUnit._06};
+    margin-top: ${spacingUnit._02};
+    margin-bottom: ${spacingUnit._01};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-top: ${spacingUnit._05};
+      margin-bottom: ${spacingUnit._04};
+    }
   }
 `
 
@@ -55,7 +86,7 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
-        <GlobalStyle/>
+      <GlobalStyle/>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

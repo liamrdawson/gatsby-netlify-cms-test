@@ -6,6 +6,7 @@ import {brandStyles, spacingUnit} from '../paletteStyles'
 
 import styled from 'styled-components'
 import MultilineContainer from './containers/MultilineContainer'
+import Button from './Button'
 
 const FeaturedThumbnail = styled.div `
   flex-basis: 35%;
@@ -42,25 +43,6 @@ const DatePostedSpan = styled.span `
   display: block;
   font-size: ${brandStyles.fontSizeLarge};
   line-height: 1.25;
-`;
-
-const Button = styled.button `
-    border-radius: ${brandStyles.borderRadius};
-    border: ${brandStyles.borderAccent};
-    color: ${brandStyles.colorSecondary};
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-appearance: none;
-    align-items: center;
-    font-size: ${brandStyles.fontSizeBody};
-    height: 2.5em;
-    justify-content: flex-start;
-    line-height: 1.5;
-    padding-bottom: calc(${spacingUnit._03} - 1px);
-    padding-left: calc(${spacingUnit._04} - 1px);
-    padding-right: calc(${spacingUnit._04} - 1px);
-    padding-top: calc(${spacingUnit._03} - 1px);
 `;
 
 class BlogRoll extends React.Component {

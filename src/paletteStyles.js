@@ -8,13 +8,13 @@ export const COLORS = {
     LIGHTER: '#F6F6F6',
     LIGHT: '#EDEDED',
     DARKEST: '#000000',
-    DARKER: '#4A4A4A',
-    DARK: '#D0D0D0',
+    DARKER: '#575756',
+    DARK: '#B2B2B2',
     PRIMARY: '#D52B1E',
     SECONDARY: '#333333',
     ALPHA40: 'rgba(25,25,25,0.40)',
     TRANSPARENT: 'transparent',
-    ACCENT: '#F77825',
+    ACCENT: '#DEDC00',
 }
 
 export const brandStyles = {

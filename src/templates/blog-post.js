@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import {brandStyles, spacingUnit, breakpoint} from '../paletteStyles'
+import {brandStyles, layoutUnit, spacingUnit, breakpoint} from '../paletteStyles'
 import styled from 'styled-components' 
 
 import Section from '../components/containers/Section'
@@ -16,8 +16,7 @@ const TagList = styled.ul `
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: ${spacingUnit._06};
-  margin-top: ${spacingUnit._06};
+  margin: ${spacingUnit._06} ${spacingUnit._06} 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -42,27 +41,27 @@ const HeadingAndText = styled.div`
         margin: ${spacingUnit._06} auto;
     }
     p {
-      margin: ${spacingUnit._05} 0;
+      margin: ${layoutUnit._04} 0;
     }
-    h1, h2, h3 {
+    ${'' /* h1, h2, h3 {
         line-height: 1.125;
         font-weight: 600;
         color: ${brandStyles.colorBodyFont};
-    }
-    h3 {
+    } */}
+    ${'' /* h3 {
         margin-bottom: ${spacingUnit._06};
         &:not(:first-child) {
           margin-top: ${spacingUnit._05};
         }
-    }
-    h2 {
+    } */}
+    ${'' /* h2 {
         margin-top: ${spacingUnit._09};
         margin-bottom: ${spacingUnit._07};
-    }
-      &:not(:last-child), ul:not(:last-child) {
+    } */}
+      ${'' /* &:not(:last-child), ul:not(:last-child) {
         margin-bottom: ${spacingUnit._05};
       }
-    }
+    } */}
 `;
 
 export const BlogPostTemplate = ({

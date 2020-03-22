@@ -119,7 +119,7 @@ export const IndexPageTemplate = ({
         <h3>News and Events</h3>
         <BlogRoll />
         <Button as={Link} to="/blog">
-          Read more
+          More News and Events
         </Button>
       </SectionBlock>
 
