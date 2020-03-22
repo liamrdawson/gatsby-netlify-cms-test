@@ -33,7 +33,7 @@ export const brandStyles = {
     colorBackgroundLight: COLORS.LIGHTEST,
     colorBackgroundContrast: COLORS.LIGHT,
     colorBackgroundDisabled: COLORS.DARK,
-    colorBackgroundDark: COLORS.DARKEST,
+    colorBackgroundDark: COLORS.DARKER,
     colorBackgroundAccent: COLORS.ACCENT,
 
     colorBoxShadowBase: COLORS.ALPHA40,

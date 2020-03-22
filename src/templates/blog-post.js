@@ -24,7 +24,6 @@ const TagList = styled.ul `
   li {
     padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
     margin-bottom: ${spacingUnit._06};
-    margin-top: 0;
   }
 `;
 
@@ -43,25 +42,6 @@ const HeadingAndText = styled.div`
     p {
       margin: ${layoutUnit._04} 0;
     }
-    ${'' /* h1, h2, h3 {
-        line-height: 1.125;
-        font-weight: 600;
-        color: ${brandStyles.colorBodyFont};
-    } */}
-    ${'' /* h3 {
-        margin-bottom: ${spacingUnit._06};
-        &:not(:first-child) {
-          margin-top: ${spacingUnit._05};
-        }
-    } */}
-    ${'' /* h2 {
-        margin-top: ${spacingUnit._09};
-        margin-bottom: ${spacingUnit._07};
-    } */}
-      ${'' /* &:not(:last-child), ul:not(:last-child) {
-        margin-bottom: ${spacingUnit._05};
-      }
-    } */}
 `;
 
 export const BlogPostTemplate = ({

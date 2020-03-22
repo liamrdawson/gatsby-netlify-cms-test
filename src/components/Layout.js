@@ -37,46 +37,36 @@ const GlobalStyle = createGlobalStyle`
   }
   h1 {
     font-size: ${brandStyles.fontSizeHeader};
-    margin-top: ${spacingUnit._07};
     margin-bottom: ${spacingUnit._06};
     @media screen and (min-width: ${breakpoint.sm}) {
-      margin-top: ${spacingUnit._09};
       margin-bottom: ${spacingUnit._08};
     }
   }
   h2 {
     font-size: ${brandStyles.fontSizeLargest};
-    margin-top: ${spacingUnit._06};
     margin-bottom: ${spacingUnit._05};
     @media screen and (min-width: ${breakpoint.sm}) {
-      margin-top: ${spacingUnit._08};
       margin-bottom: ${spacingUnit._07};
     }
   }
   h3 {
     font-size: ${brandStyles.fontSizeLarger};
-    margin-top: ${spacingUnit._05};
     margin-bottom: ${spacingUnit._04};
     @media screen and (min-width: ${breakpoint.sm}) {
-      margin-top: ${spacingUnit._07};
       margin-bottom: ${spacingUnit._06};
     }
   }
   h4 {
     font-size: ${brandStyles.fontSizeLarge};
-    margin-top: ${spacingUnit._03};
     margin-bottom: ${spacingUnit._02};
-    @media screen and (min-width: ${breakpoint.sm}) {
-      margin-top: ${spacingUnit._06};
+    @media screen and (min-width: ${breakpoint.sm}) { */}
       margin-bottom: ${spacingUnit._05};
     }
   }
   h5 {
     font-size: ${brandStyles.fontSizeBody};
-    margin-top: ${spacingUnit._02};
     margin-bottom: ${spacingUnit._01};
     @media screen and (min-width: ${breakpoint.sm}) {
-      margin-top: ${spacingUnit._05};
       margin-bottom: ${spacingUnit._04};
     }
   }

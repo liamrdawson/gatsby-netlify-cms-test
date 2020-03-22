@@ -24,7 +24,13 @@ const FullWidthImageContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-bottom: ${layoutUnit._05}; 
+    @media screen and (min-width: ${breakpoint.md}) {
+      margin-bottom: ${layoutUnit._06}; 
+    }
+    @media screen and (min-width: ${breakpoint.xl}) {
+      margin-bottom: ${layoutUnit._07}; 
+    }
 `;
 
 const TitleContainer = styled.div`
@@ -65,12 +71,25 @@ const Titles = styled.div`
 `;
 
 const SectionBlock = styled.section`
-  margin: ${layoutUnit._05} 0; 
+  margin-bottom: ${layoutUnit._05}; 
   @media screen and (min-width: ${breakpoint.md}) {
-    margin: ${layoutUnit._06} 0; 
+    margin-bottom: ${layoutUnit._06}; 
   }
   @media screen and (min-width: ${breakpoint.xl}) {
-    margin: ${layoutUnit._07} 0; 
+    margin-bottom: ${layoutUnit._07}; 
+  }
+`;
+
+const ColorBlock = styled.div`
+  background-color: ${brandStyles.colorBackgroundDark};
+  color: ${brandStyles.colorFontSecondary};
+  padding: ${layoutUnit._04} 0;
+  div {
+    width: 60%;
+    margin: 0 auto;
+    h3 {
+    color: ${brandStyles.colorFontAccent};
+    }
   }
 `;
 
@@ -102,10 +121,16 @@ export const IndexPageTemplate = ({
         </Titles>
       </SectionBlock>
 
-      <SectionBlock>
-        <h3>{heading}</h3>
-        <p>{description}</p>
-      </SectionBlock>
+    </Column>
+
+      <ColorBlock>
+        <div>
+          <h3>{heading}</h3>
+          <p>{description}</p>
+        </div>
+      </ColorBlock>
+
+    <Column>
 
       <SectionBlock>
         <h3>Our Flowers</h3>

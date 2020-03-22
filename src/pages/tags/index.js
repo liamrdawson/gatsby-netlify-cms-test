@@ -27,7 +27,6 @@ const TagList = styled.ul `
   li {
     padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
     margin-bottom: ${spacingUnit._06};
-    margin-top: 0;
   }
 `;
 

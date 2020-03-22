@@ -14,7 +14,6 @@ const ContentCentered = styled.div`
     li {
         padding: 0 ${spacingUnit._05} ${spacingUnit._05} 0;
         margin-bottom: ${spacingUnit._06};
-        margin-top: 0;
     }
     @media screen and (min-width: ${breakpoint.lg}) {
         min-width: 800px;

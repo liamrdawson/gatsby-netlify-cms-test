@@ -7,7 +7,6 @@ const PricingColumns = styled.div`
   display: flex;
   margin-left: -${spacingUnit._04};
   margin-right: -${spacingUnit._04};
-  margin-top: -${spacingUnit._04};
   &:last-child {
     margin-bottom: -${spacingUnit._04};
   }

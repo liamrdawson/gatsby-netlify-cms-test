@@ -16,7 +16,6 @@ const FullWidthImageContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
     h1 {
       font-weight: bold;
       boxShadow: ${brandStyles.boxShadow};
@@ -37,7 +36,6 @@ const Content = styled.div`
   li {
     padding: 0 ${spacingUnit._07} ${spacingUnit._05} 0;
     margin-bottom: ${spacingUnit._06};
-    margin-top: 0;
   }
 `;
 

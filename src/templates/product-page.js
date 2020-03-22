@@ -23,7 +23,6 @@ const FullWidthImageContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
     h1, h2 {
       font-weight: bold;
       boxShadow: ${brandStyles.boxShadow};
