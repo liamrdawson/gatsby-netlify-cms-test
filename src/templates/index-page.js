@@ -24,12 +24,12 @@ const FullWidthImageContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: ${layoutUnit._05}; 
+    margin-bottom: ${layoutUnit._04}; 
     @media screen and (min-width: ${breakpoint.md}) {
-      margin-bottom: ${layoutUnit._06}; 
+      margin-bottom: ${layoutUnit._05}; 
     }
     @media screen and (min-width: ${breakpoint.xl}) {
-      margin-bottom: ${layoutUnit._07}; 
+      margin-bottom: ${layoutUnit._06}; 
     }
 `;
 
@@ -50,11 +50,11 @@ const TitleContainer = styled.div`
         color: ${brandStyles.colorFontSecondary};
     }
     h1 {
-      padding: ${spacingUnit._05};
+      padding: ${spacingUnit._04};
     }
     h3 {
       line-height: 1;
-      padding: ${spacingUnit._03};
+      padding: ${spacingUnit._02};
     }
 `;
 
@@ -71,25 +71,37 @@ const Titles = styled.div`
 `;
 
 const SectionBlock = styled.section`
-  margin-bottom: ${layoutUnit._05}; 
+  margin-bottom: ${layoutUnit._04}; 
   @media screen and (min-width: ${breakpoint.md}) {
-    margin-bottom: ${layoutUnit._06}; 
+    margin-bottom: ${layoutUnit._05}; 
   }
   @media screen and (min-width: ${breakpoint.xl}) {
-    margin-bottom: ${layoutUnit._07}; 
+    margin-bottom: ${layoutUnit._06}; 
   }
 `;
 
 const ColorBlock = styled.div`
   background-color: ${brandStyles.colorBackgroundDark};
   color: ${brandStyles.colorFontSecondary};
-  padding: ${layoutUnit._04} 0;
+  padding: ${layoutUnit._03} 0;
   div {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
+    @media screen and (min-width: ${breakpoint.md}) {
+    width: 60%;
+    }
     h3 {
     color: ${brandStyles.colorFontAccent};
     }
+  }
+  margin-bottom: ${layoutUnit._04}; 
+  @media screen and (min-width: ${breakpoint.md}) {
+    margin-bottom: ${layoutUnit._05}; 
+    padding: ${layoutUnit._04} 0;
+  }
+  @media screen and (min-width: ${breakpoint.xl}) {
+    margin-bottom: ${layoutUnit._06}; 
+    padding: ${layoutUnit._05} 0;
   }
 `;
 

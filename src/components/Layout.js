@@ -37,37 +37,37 @@ const GlobalStyle = createGlobalStyle`
   }
   h1 {
     font-size: ${brandStyles.fontSizeHeader};
-    margin-bottom: ${spacingUnit._06};
-    @media screen and (min-width: ${breakpoint.sm}) {
-      margin-bottom: ${spacingUnit._08};
-    }
-  }
-  h2 {
-    font-size: ${brandStyles.fontSizeLargest};
     margin-bottom: ${spacingUnit._05};
     @media screen and (min-width: ${breakpoint.sm}) {
       margin-bottom: ${spacingUnit._07};
     }
   }
-  h3 {
-    font-size: ${brandStyles.fontSizeLarger};
+  h2 {
+    font-size: ${brandStyles.fontSizeLargest};
     margin-bottom: ${spacingUnit._04};
     @media screen and (min-width: ${breakpoint.sm}) {
       margin-bottom: ${spacingUnit._06};
     }
   }
+  h3 {
+    font-size: ${brandStyles.fontSizeLarger};
+    margin-bottom: ${spacingUnit._03};
+    @media screen and (min-width: ${breakpoint.sm}) {
+      margin-bottom: ${spacingUnit._05};
+    }
+  }
   h4 {
     font-size: ${brandStyles.fontSizeLarge};
-    margin-bottom: ${spacingUnit._02};
+    margin-bottom: ${spacingUnit._01};
     @media screen and (min-width: ${breakpoint.sm}) { */}
-      margin-bottom: ${spacingUnit._05};
+      margin-bottom: ${spacingUnit._04};
     }
   }
   h5 {
     font-size: ${brandStyles.fontSizeBody};
     margin-bottom: ${spacingUnit._01};
     @media screen and (min-width: ${breakpoint.sm}) {
-      margin-bottom: ${spacingUnit._04};
+      margin-bottom: ${spacingUnit._03};
     }
   }
 `
