@@ -1,27 +1,15 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
-import {brandStyles, spacingUnit} from '../paletteStyles'
+import {spacingUnit} from '../paletteStyles'
 
 import styled from 'styled-components' 
 
 import ContentCentered from './containers/ContentCentered'
 import Column from './containers/Column'
-
-const List = styled.ul`
-  line-height: 1.25;
-  list-style: none;
-  text-align: left;
-  li a {
-      padding: 0 ${spacingUnit._05};
-      cursor: pointer;
-      color: ${brandStyles.colorFontLink};
-  }
-`;
 
 const SocialIcon = styled.img`
   width: ${spacingUnit._05};

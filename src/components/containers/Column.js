@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {breakpoint, spacingUnit, layoutUnit} from '../../paletteStyles'
+import {spacingUnit, layoutUnit} from '../../paletteStyles'
 
 const Column = styled.div`
     margin: 0 auto;

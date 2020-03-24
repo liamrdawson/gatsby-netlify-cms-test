@@ -25,15 +25,14 @@ const BlogListArticle = styled.article `
   padding: ${spacingUnit._06} ${spacingUnit._05};
   position: relative;
   box-shadow: ${brandStyles.boxShadow};
-  header {
+  ${'' /* p {margin-bottom: ${spacingUnit._05};} */}
+  header, p {
     display: flex;
     flex-direction: column;
     margin-bottom: ${spacingUnit._05};
-    p a {
+    p {
       word-break: break-word;
-      font-weight: 600;
-      line-height: 1.125;
-      font-size: ${brandStyles.fontSizeLarge};
+      ${'' /* margin-bottom: ${spacingUnit._05}; */}
     }
   }
 `;
@@ -41,8 +40,15 @@ const BlogListArticle = styled.article `
 const DatePostedSpan = styled.span `
   word-break: break-word;
   display: block;
+`;
+
+const PostTitle = styled(Link)`
+  margin-bottom: ${spacingUnit._05};
+  word-break: break-word;
+  font-weight: 600;
+  line-height: 1.125;
   font-size: ${brandStyles.fontSizeLarge};
-  line-height: 1.25;
+  text-decoration: none;
 `;
 
 class BlogRoll extends React.Component {
@@ -67,25 +73,24 @@ class BlogRoll extends React.Component {
                       />
                     </FeaturedThumbnail>
                   ) : null}
-                  <p>
-                    <Link to={post.fields.slug}>
+                  
+                    <PostTitle to={post.fields.slug}>
                       {post.frontmatter.title}
-                    </Link>
+                    </PostTitle>
+                  <p>
                     <DatePostedSpan>
-                      {post.frontmatter.date}
+                      Date posted: {post.frontmatter.date}
                     </DatePostedSpan>
                   </p>
                 </header>
                 <p>
                   {post.excerpt}
-                  <br />
-                  <br />
+                </p>
                   <Link  to={post.fields.slug}>
                     <Button>
                       Keep Reading →
                     </Button>
                   </Link>
-                </p>
               </BlogListArticle>
             </div>
           ))}

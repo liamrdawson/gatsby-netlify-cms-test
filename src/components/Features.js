@@ -8,9 +8,10 @@ import {spacingUnit, layoutUnit, breakpoint} from '../paletteStyles'
 
 const FeatureGridBlock = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  ${'' /* width: 120%; */}
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr;
-  grid-gap: ${layoutUnit._01};
+  margin-bottom: ${layoutUnit._03};
   @media screen and (min-width: ${breakpoint.sm}) {
     grid-template-columns: 1fr 1fr;
     grid-gap: ${layoutUnit._02};

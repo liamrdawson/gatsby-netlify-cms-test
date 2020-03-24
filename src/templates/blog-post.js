@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import {brandStyles, layoutUnit, spacingUnit, breakpoint} from '../paletteStyles'
+import {layoutUnit, spacingUnit, breakpoint} from '../paletteStyles'
 import styled from 'styled-components' 
 
 import Section from '../components/containers/Section'

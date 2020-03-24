@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 import {brandStyles, spacingUnit, layoutUnit, breakpoint} from '../paletteStyles'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+import FeatureGrid from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 import styled from 'styled-components'
@@ -145,15 +145,15 @@ export const IndexPageTemplate = ({
     <Column>
 
       <SectionBlock>
-        <h3>Our Flowers</h3>
-        <Features gridItems={intro.blurbs} />
+        <h2>Our Flowers</h2>
+        <FeatureGrid gridItems={intro.blurbs} />
         <Button as={Link} to="/products">
           See all products
         </Button>
       </SectionBlock>
 
       <SectionBlock>
-        <h3>News and Events</h3>
+        <h2>News and Events</h2>
         <BlogRoll />
         <Button as={Link} to="/blog">
           More News and Events

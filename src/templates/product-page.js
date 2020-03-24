@@ -17,7 +17,7 @@ const FullWidthImageContainer = styled.div `
     position: relative;
     left: 50%;
     right: 50%;
-    margin: 2em -50vw;
+    margin: 0 -50vw;
     background-size: cover;
     background-position: bottom;
     display: flex;
