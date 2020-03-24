@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: I am a title
-image: /img/20200319_122643.jpg
+image: /img/20200319_122643.png
 heading: I am a heading
 subheading: 'Lorem ipsum dolor sit amet consectetur, adipiscing elit auctor'
 mainpitch:
