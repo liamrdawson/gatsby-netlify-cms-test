@@ -43,14 +43,17 @@ const TitleContainer = styled.div`
       h1, h2, h3 {
         text-align: center;
         font-weight: 700;
-        background-color: ${brandStyles.colorBackgroundAccent};
-        box-shadow:  ${
+        ${'' /* box-shadow:  ${
           brandStyles.boxShadow
-        };
+        }; */}
         color: ${brandStyles.colorFontSecondary};
     }
     h1 {
+      font-size: ${brandStyles.fontSizeHeader};
       padding: ${spacingUnit._04};
+      @media screen and (min-width: ${breakpoint.sm}) {
+        font-size: ${brandStyles.fontSizeGiant};
+      }
     }
     h3 {
       line-height: 1;

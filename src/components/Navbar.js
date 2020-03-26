@@ -14,6 +14,7 @@ const NavLink = styled(Link)`
   justify-content: center;
   display: flex;
   text-decoration: none;
+  color: ${brandStyles.colorBodyFont};
 `;
 
 const NavEnd = styled.div`
@@ -41,15 +42,19 @@ const NavMenu = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 2rem;
+  height: 1.5rem;
   @media screen and (min-width: ${breakpoint.lg}) {
-    min-height: 4rem;
+    min-height: 3rem;
   }
 `;
 
 const NavBarBrand = styled.div`
   align-items: stretch;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: ${spacingUnit._04};
+  ${'' /* display: flex; */}
   flex-shrink: 0;
   min-height: 2rem;
   @media screen and (min-width: ${breakpoint.lg}) {
@@ -60,9 +65,11 @@ const NavBarBrand = styled.div`
 const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
+  ${'' /* padding: ${spacingUnit._03}; */}
   position: relative;
   width: auto;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
   display: flex;
   min-height: 3rem;
   width: 100%;
@@ -73,7 +80,7 @@ const Container = styled.div`
 `
 
 const Nav = styled.nav`
-  height: 3rem;
+  height: 4.25rem;
   position: relative;
   z-index: 30;
   @media screen and (min-width: ${breakpoint.lg}) {
@@ -133,9 +140,9 @@ const Navbar = () => {
       <Nav role="navigation" aria-label="main-navigation">
         <Container>
           <NavBarBrand>
-            <NavLink>
+            {/* <NavLink> */}
               <Logo src={logo} alt="Wild Ivy"/>
-            </NavLink>
+            {/* </NavLink> */}
             <Burger open={open} onClick={() => setOpen(!open)}  data-target="navMenu">
               <span />
               <span />
