@@ -3,7 +3,6 @@ import React from 'react'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
 import {spacingUnit} from '../paletteStyles'
 
 import styled from 'styled-components' 
@@ -37,69 +36,15 @@ const Footer = class extends React.Component {
     return (
       <StyledFooter>
           <ContentCenteredFooter>
-              {/* <Column>
-                <section>
-                  <List>
-                    <li>
-                      <Link to="/">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a      
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </List>
-                </section>
-              </Column>
               <Column>
-                <section>
-                  <List>
-                    <li>
-                      <Link to="/blog">
-                        Latest Events
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </List>
-                </section>
-              </Column> */}
-              <Column>
-                <SocialLink>
+                <SocialLink href="https://www.facebook.com/Penrithflowerworldpenrith/">
                   <SocialIcon src={facebook} alt="Facebook" />
                 </SocialLink>
                 <SocialLink>
                   <SocialIcon src={twitter} alt="Twitter" />
                 </SocialLink>
-                <SocialLink>
+                <SocialLink href="https://www.instagram.com/flowerworldpenrith/?hl=en">
                   <SocialIcon src={instagram}  alt="Instagram" />
-                </SocialLink>
-                <SocialLink>
-                  <SocialIcon src={vimeo} alt="Vimeo" />
                 </SocialLink>
               </Column>
         </ContentCenteredFooter>

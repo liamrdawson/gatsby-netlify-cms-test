@@ -4,9 +4,10 @@ import Layout from '../../components/Layout'
 import styled from 'styled-components'
 import Section from '../../components/containers/Section'
 import Container from '../../components/containers/Container'
-import {brandStyles, spacingUnit} from '../../paletteStyles'
+import {brandStyles, spacingUnit, layoutUnit} from '../../paletteStyles'
 
 const FormContent = styled.div`
+  padding: ${layoutUnit._06} 0;
   h1 {
     color: ${brandStyles.colorSecondary};;
     font-weight: 600;

@@ -45,11 +45,11 @@ export const brandStyles = {
     borderColorMedium: COLORS.DARKER,
     borderColorAccent: COLORS.ACCENT,
 
-    borderDarkest: `solid 2px ${COLORS.DARKEST}`,
-    borderDarker: `solid 2px ${COLORS.DARKER}`,
-    borderAccent: `solid 2px ${COLORS.ACCENT}`,
-    borderBase: `solid 2px ${COLORS.DARK}`,
-    borderTransparent: `solid 2px ${COLORS.TRANSPARENT}`,
+    borderDarkest: `solid 1px ${COLORS.DARKEST}`,
+    borderDarker: `solid 1px ${COLORS.DARKER}`,
+    borderAccent: `solid 1px ${COLORS.ACCENT}`,
+    borderBase: `solid 1px ${COLORS.DARK}`,
+    borderTransparent: `solid 1px ${COLORS.TRANSPARENT}`,
     borderRadius: `4px`,
 
     fontBaseSize: '100%',

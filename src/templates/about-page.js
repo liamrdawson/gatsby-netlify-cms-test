@@ -6,20 +6,28 @@ import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/containers/Section'
 import Container from '../components/containers/Container'
 import Column from '../components/containers/Column'
+import styled from 'styled-components'
+import {layoutUnit} from '../paletteStyles'
 
+const AboutColumn = styled(Column)`
+  padding: ${layoutUnit._06} 0;
+  h2, p {
+    margin-bottom: ${layoutUnit._04};
+  }
+`;
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-
+  console.log(content);
   return (
     <Section>
       <Container>
-        <Column>
+        <AboutColumn>
               <h2>
                 {title}
               </h2>
               <PageContent content={content} />
-        </Column>
+        </AboutColumn>
       </Container>
     </Section>
   )

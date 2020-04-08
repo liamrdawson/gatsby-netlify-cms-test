@@ -86,7 +86,10 @@ const SectionBlock = styled.section`
 const ColorBlock = styled.div`
   background-color: ${brandStyles.colorBackgroundDark};
   color: ${brandStyles.colorFontSecondary};
-  padding: ${layoutUnit._03} 0;
+  padding: ${layoutUnit._04} 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   div {
     width: 80%;
     margin: 0 auto;
@@ -100,11 +103,11 @@ const ColorBlock = styled.div`
   margin-bottom: ${layoutUnit._04}; 
   @media screen and (min-width: ${breakpoint.md}) {
     margin-bottom: ${layoutUnit._05}; 
-    padding: ${layoutUnit._04} 0;
+    padding: ${layoutUnit._05} 0;
   }
   @media screen and (min-width: ${breakpoint.xl}) {
     margin-bottom: ${layoutUnit._06}; 
-    padding: ${layoutUnit._05} 0;
+    padding: ${layoutUnit._06} 0;
   }
 `;
 
