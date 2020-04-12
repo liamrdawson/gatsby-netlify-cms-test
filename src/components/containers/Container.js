@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {breakpoint} from '../../paletteStyles'
 
 const Container = styled.div`
-    flex-grow: 1;
+    ${'' /* flex-grow: 1; */}
     margin: 0 auto;
     position: relative;
     width: auto;

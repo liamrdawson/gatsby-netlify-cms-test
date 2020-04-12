@@ -1,7 +1,15 @@
 ---
 templateKey: about-page
 title: About Us
+test: "This is a test" 
+image: /img/1920x1080.png
+main:
+  image1:
+    image: /img/1920x1080.png
+  image2:
+    image: /img/1920x1080.png
 ---
+
 ### Here is something about Wild Ivy
 
 Ornare elementum aptent suspendisse curae interdum hac tortor, vivamus fermentum dictum ultrices sagittis sociosqu habitant consequat, integer tempor porttitor velit donec blandit.
