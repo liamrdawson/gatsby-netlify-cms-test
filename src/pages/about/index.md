@@ -1,6 +1,14 @@
 ---
 templateKey: about-page
 title: About Us
+image: /img/1920x1080.png
+main:
+    image1: 
+        alt: Some words describing the image.
+        image: /img/1920x1080.png
+    image2:
+        alt: Some words describing the image.
+        image: /img/1920x1080.png
 ---
 ### Here is something about Wild Ivy
 
