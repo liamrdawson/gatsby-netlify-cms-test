@@ -43,7 +43,7 @@ export const AboutPageTemplate = ({ image, main, title, content, contentComponen
               </h2>
               <PageContent content={content} />
         </AboutColumn>
-      </AboutContainer>
+      </Container>
     </Section>
   )
 }
