@@ -16,6 +16,12 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: ${brandStyles.colorBodyFont};
   height: 100%;
+  @media(min-width: ${breakpoint.lg}) {
+    margin-right: ${spacingUnit._07};
+  }
+  @media(min-width: ${breakpoint.xl}) {
+    margin-right: ${spacingUnit._08};
+  }
 `;
 
 const NavEnd = styled.div`
@@ -43,7 +49,7 @@ const NavMenu = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 100%;
+  height: 200%;
   @media screen and (min-width: ${breakpoint.lg}) {
     min-height: 3rem;
   }
