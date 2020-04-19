@@ -30,13 +30,7 @@ export const AboutPageTemplate = ({ image, main, title, content, contentComponen
   const PageContent = contentComponent || Content
   return (
     <Section>
-      <Container 
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        }}
-      >
+      <Container>
         <AboutColumn>
               <h2>
                 {title}
