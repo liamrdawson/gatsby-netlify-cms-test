@@ -1,4 +1,5 @@
 [[headers]]
 for = "/static/*"
 [headers.values]
+Access-Control-Allow-Origin = "*"
 Cache-Control = "public, max-age=360000"
