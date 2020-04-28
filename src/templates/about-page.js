@@ -17,7 +17,7 @@ const AboutContainer = styled(Container)`
 
 const AboutColumn = styled(Column)`
   padding: ${layoutUnit._03};
-  width: 80%;
+  width: 49%;
   margin-left: auto;
   h2, p {
     margin-bottom: ${layoutUnit._04};
@@ -29,9 +29,9 @@ export const AboutPageTemplate = ({ image, main, title, content, contentComponen
   return (
     <Section>
       <AboutContainer>
-        {/* <AboutColumn>
+        <AboutColumn>
           <p>test</p>
-        </AboutColumn> */}
+        </AboutColumn>
         <AboutColumn>
               <h2>
                 {title}
