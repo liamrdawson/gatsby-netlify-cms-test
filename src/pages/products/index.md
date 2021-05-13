@@ -53,7 +53,7 @@ main:
     image: /img/john-mark-smith-eHlVZcSrjfg-unsplash.jpg
   image3:
     alt: Some words describing the image.
-    image: /img/1920x1080.png
+    image: /img/kylie-paz-DmFfFCpr50U-unsplash.jpg
 testimonials:
   - author: Barry Mc Flowers
     quote: My wife loved her flowers and the staff were so helpful
@@ -61,7 +61,7 @@ testimonials:
     quote: >-
       Best Flowers I've ever received, would certainly go to Wild Ivy for future
       events.
-full_image: /img/1920x1080.png
+full_image: /img/alice-dietrich-YXPIVqyQcp0-unsplash.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
