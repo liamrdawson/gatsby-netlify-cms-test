@@ -50,7 +50,7 @@ main:
     image: /img/1920x1080.png
   image2:
     alt: Some words describing the image.
-    image: /img/1920x1080.png
+    image: /img/john-mark-smith-eHlVZcSrjfg-unsplash.jpg
   image3:
     alt: Some words describing the image.
     image: /img/1920x1080.png
